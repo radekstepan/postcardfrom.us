@@ -1,0 +1,7 @@
+{
+    "name": "voyage-pacifique",
+    "version": "0.0.0",
+    "dependencies": {
+        "foundation": "5.0.2"
+    }
+}

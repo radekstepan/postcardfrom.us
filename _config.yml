@@ -6,6 +6,8 @@ timezone:    Europe/London
 future:      true
 # Site root for assets when running on GitHub Pages.
 baseurl:     http://radekstepan.com/voyage-pacifique
+# Ignore Node.js stuff.
+exclude:     [ node_modules, vendor, Gruntfile.coffee, bower.json, package.json ]
 
 encoding:    UTF-8
 markdown:    redcarpet

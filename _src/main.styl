@@ -1,0 +1,119 @@
+@import 'nib'
+
+$padding = 20px
+
+body
+    font-family: 'PT Sans', sans-serif
+    background: #E3E5E7
+    padding: $padding
+    color: #444
+
+#box
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.25)
+    background: #FFF
+
+#sidebar
+    background: #2B2E2E
+    
+    #title, #status
+        color: #FFF
+
+    #title
+        padding: $padding
+        background: #25CE98
+        font-size: 22px
+
+    #status
+        padding: 10px $padding
+        background: #24AB80
+
+        .icon
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            background: #1F775B
+            display: inline-block
+            margin-right: 10px
+
+            &:before
+                color: #FFF
+                font-size: 12px
+                margin-left: 4px
+
+    #trail
+        padding: 0 $padding
+        color: #8C989C
+
+        ul
+            list-style-type: none
+            margin: 0
+            margin-left: 9px
+            border-left: 2px solid #4E5054
+            padding: $padding 0
+
+            li
+                padding: 10px 0 10px 23px
+                position: relative
+
+                &:after
+                    content: ""
+                    display: block
+                    position: absolute
+                    top: 18px
+                    left: -6px
+                    border-radius: 50%
+                    width: 10px
+                    height: 10px
+                    background: #4E5054
+
+                &.active
+                    &:before
+                        background: #24AB80
+                        content: ""
+                        display: block
+                        position: absolute
+                        top: 18px
+                        left: -6px
+                        border-radius: 50%
+                        background: #24AB80
+                        width: 10px
+                        height: 10px
+                    
+                    &:after
+                        width: 20px
+                        height: 20px
+                        background: rgba(#24AB80, 0.5)
+                        top: 13px
+                        left: -11px
+
+                    a, .date
+                        color: #FFF
+
+                a
+                    color: #8C989C
+
+                .date
+                    font-size: 12px
+
+#main
+    padding: $padding
+
+    header
+        h1
+            color: #25CE98
+            font-size: 24px
+            margin: 20px 0 14px 0
+
+        #meta
+            .icon
+                &:not(:last-child)
+                    margin-bottom: 6px
+
+                &:before
+                    color: #A5A9B2
+                    margin-right: 6px
+
+        #day
+            border-left: 1px solid #EBECEF
+            line-height: 40px
+            text-align: right
