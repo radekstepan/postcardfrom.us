@@ -3,7 +3,7 @@
 Watch & serve:
 
 ```bash
-$ jekyll serve --watch --drafts
+$ jekyll serve --watch --drafts --baseurl=
 ```
 
 Build:

@@ -7,7 +7,7 @@ future:      true
 # Build directory.
 destination: public
 # Site root for assets when running on GitHub Pages.
-url:         ''#/voyage-pacifique
+baseurl:     http://radekstepan.com/voyage-pacifique
 
 encoding:    UTF-8
 markdown:    redcarpet
