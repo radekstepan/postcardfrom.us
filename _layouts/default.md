@@ -6,15 +6,15 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
     <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="{{ site.url }}/css/syntax.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
 </head>
 <body>
     <div class="site">
         <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
+            <h1 class="title"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <a class="extra" href="{{ site.baseurl }}/">home</a>
         </div>
 
         {{ content }}
