@@ -6,9 +6,9 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
     <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/syntax.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
 </head>
 <body>
     <div class="site">
