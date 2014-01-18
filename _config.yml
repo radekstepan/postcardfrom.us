@@ -1,3 +1,16 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-pygments: true
+# Name of the site.
+name:        Voyage dans le Pacifique
+# Center on UK.
+timezone:    Europe/London
+# Publish articles with a future date.
+future:      true
+# Source directory.
+source:      src
+# Build directory.
+destination: build
+# Compute related posts.
+lsi:         true
+
+encoding:    UTF-8
+markdown:    redcarpet
+pygments:    true

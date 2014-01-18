@@ -1,5 +1,13 @@
 #Voyage dans le Pacifique
 
+Watch & serve:
+
 ```bash
-$ jekyll serve -w
+$ jekyll serve --watch --drafts
+```
+
+Build:
+
+```bash
+$ jekyll build
 ```
