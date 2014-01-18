@@ -4,12 +4,8 @@ name:        Voyage dans le Pacifique
 timezone:    Europe/London
 # Publish articles with a future date.
 future:      true
-# Source directory.
-source:      src
 # Build directory.
-destination: build
-# Compute related posts.
-lsi:         true
+destination: public
 
 encoding:    UTF-8
 markdown:    redcarpet
