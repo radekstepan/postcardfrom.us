@@ -4,8 +4,6 @@ name:        Voyage dans le Pacifique
 timezone:    Europe/London
 # Publish articles with a future date.
 future:      true
-# Build directory.
-destination: public
 # Site root for assets when running on GitHub Pages.
 baseurl:     http://radekstepan.com/voyage-pacifique
 
