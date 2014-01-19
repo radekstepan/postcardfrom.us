@@ -14,7 +14,6 @@ h5{font-size:10px}
 a{text-decoration:none;color:#20676a;cursor:pointer;}
 a:hover{opacity:.6;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";filter:alpha(opacity=60);-webkit-transition:opacity 0.15s ease-in-out;-moz-transition:opacity 0.15s ease-in-out;-o-transition:opacity 0.15s ease-in-out;-ms-transition:opacity 0.15s ease-in-out;transition:opacity 0.15s ease-in-out}
 p{line-height:22px}
-blockquote{margin-left:20px;padding-left:15px;border-left:3px solid #898989}
 ul{list-style-type:none;padding:0;}
 ul li{display:inline-block}
 #top{background:#f4f8f3;padding-bottom:70px}
@@ -25,12 +24,17 @@ ul li{display:inline-block}
 #header ul li a{color:#7fa5a7;font-weight:bold}
 #content .wrapper{background:#fff;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.05);box-shadow:0 1px 2px rgba(0,0,0,0.05);padding:70px;margin:0 auto;width:500px;}
 #content .wrapper:not(:last-child){margin-bottom:70px}
-#content .wrapper.post .photo{margin-bottom:20px;}
-#content .wrapper.post .photo img{max-width:100%;height:auto}
-#content .wrapper.post .content{margin:20px 0;}
-#content .wrapper.post .content p,#content .wrapper.post .content blockquote{text-align:justify}
-#content .wrapper.post .tags,#content .wrapper.post .meta{margin-top:10px;color:#bbb}
-#content .wrapper.post .tags li:not(:last-child){margin-right:10px}
+#content .wrapper .photo{margin-bottom:20px;}
+#content .wrapper .photo img{max-width:100%;height:auto}
+#content .wrapper .content{margin:20px 0;}
+#content .wrapper .content p,#content .wrapper .content blockquote{text-align:justify}
+#content .wrapper .tags,#content .wrapper .meta{margin-top:15px;color:#bbb}
+#content .wrapper .tags li:not(:last-child){margin-right:10px}
+#content .wrapper.post blockquote{margin-left:20px;padding-left:15px;border-left:3px solid #898989;}
+#content .wrapper.post blockquote p{margin:0}
+#content .wrapper.quote h2.title{display:none}
+#content .wrapper.quote blockquote{margin:0;font-weight:normal;font-size:28px;letter-spacing:-1px;}
+#content .wrapper.quote blockquote p{margin:0;line-height:34px}
 #footer{color:#999;padding:30px 40px 50px 40px;text-align:center;}
 #footer ul li{margin:0 10px;}
 #footer ul li a{font-weight:bold}

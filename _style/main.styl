@@ -41,11 +41,6 @@ a
 p
     line-height: 22px
 
-blockquote
-    margin-left: 20px
-    padding-left: 15px
-    border-left: 3px solid #898989
-
 ul
     list-style-type: none
     padding: 0
@@ -88,28 +83,50 @@ ul
         &:not(:last-child)
             margin-bottom: 70px
 
+        .photo
+            margin-bottom: 20px
+
+            img
+                max-width: 100%
+                height: auto
+
+        .content
+            margin: 20px 0
+
+            p, blockquote
+                text-align: justify
+
+        .tags, .meta
+            margin-top: 15px
+            color: #bbb
+
+        .tags
+            li
+                &:not(:last-child)
+                    margin-right: 10px
+
         &.post
-            .photo
-                margin-bottom: 20px
+            blockquote
+                margin-left: 20px
+                padding-left: 15px
+                border-left: 3px solid #898989
 
-                img
-                    max-width: 100%
-                    height: auto
+                p
+                    margin: 0
 
-            .content
-                margin: 20px 0
+        &.quote
+            h2.title
+                display: none
 
-                p, blockquote
-                    text-align: justify
+            blockquote
+                margin: 0
+                font-weight: normal
+                font-size: 28px
+                letter-spacing: -1px
 
-            .tags, .meta
-                margin-top: 10px
-                color: #bbb
-
-            .tags
-                li
-                    &:not(:last-child)
-                        margin-right: 10px
+                p
+                    margin: 0
+                    line-height: 34px
 
 #footer
     color: #999
