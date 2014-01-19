@@ -14,7 +14,7 @@
             <h2 class="title">{{ page.title }}</h2>
             <div class="content">{{ content }}</div>
         {% when 'no' %}
-            <h2 class="title"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+            <h2 class="title"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
             <div class="content">{{ page.content }}</div>
     {% endcase %}
 

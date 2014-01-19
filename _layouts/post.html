@@ -5,12 +5,12 @@ layout: default
 <div id="flip">
 {% if page.next %}
     <div class="next">
-        <a href="{{ page.next.url }}"><span class="icon left-open"></span></a>
+        <a href="{{ page.next.url | prepend: site.baseurl }}"><span class="icon left-open"></span></a>
     </div>
 {% endif %}
 {% if page.previous %}
     <div class="previous">
-      <a href="{{ page.previous.url }}"><span class="icon right-open"></span></a>
+      <a href="{{ page.previous.url | prepend: site.baseurl }}"><span class="icon right-open"></span></a>
     </div>
 {% endif %}
 </div>
