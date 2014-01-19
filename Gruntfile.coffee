@@ -5,24 +5,22 @@ module.exports = (grunt) ->
         stylus:
             compile:
                 src: [
-                    '_src/icons.styl'
-                    '_src/main.styl'
+                    '_style/main.styl'
                 ]
                 dest: 'assets/css/main.css'
 
         concat:
             styles:
                 src: [
-                    'vendor/normalize-css/normalize.css'
-                    '_src/main.css'
-                    '_src/highlight.css'
+                    'vendor/foundation/css/normalize.css'
+                    'vendor/foundation/css/foundation.css'
                 ]
-                dest: 'assets/css/all.css'
+                dest: 'assets/css/vendor.css'
 
     grunt.loadNpmTasks('grunt-contrib-stylus')
     grunt.loadNpmTasks('grunt-contrib-concat')
 
     grunt.registerTask('default', [
-        #'stylus'
+        'stylus'
         'concat'
     ])
