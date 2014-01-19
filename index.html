@@ -2,29 +2,6 @@
 layout: default
 ---
 
-{% for post in site.posts %}
-<div class="wrapper {{ post.layout }}">
-{% if post.photos %}
-{% for photo in post.photos %}
-    <div class="photo">
-        <a>
-            <img src="{{ site.baseurl }}/assets/photos/{{ photo }}" />
-        </a>
-    </div>
-{% endfor %}
-{% endif %}
-
-    <h2 class="title">{{ post.title }}</h2>
-    
-    <div class="content">
-        {{ post.content }}
-    </div>
-    
-    <ul class="tags">
-    {% for tag in post.tags %}
-        <li>#{{ tag }}</li>
-    {% endfor %}
-    </ul>
-    <div class="meta">{{ post.date | date_to_string }}</div>
-</div>
+{% for page in site.posts %}
+{% include post.html detail="no" %}
 {% endfor %}

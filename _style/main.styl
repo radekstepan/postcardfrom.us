@@ -1,7 +1,7 @@
 @import 'nib'
 
 body
-    background: #FFF
+    background: #f4f8f3
     color: #898989
     font-family: "Domine"
     font-size: 12px
@@ -53,10 +53,6 @@ ul
     li
         display: inline-block
 
-#top
-    background: #f4f8f3
-    padding-bottom: 70px
-
 #header
     padding: 70px 0 40px 0
     text-align: center
@@ -75,6 +71,25 @@ ul
             a
                 color: #7fa5a7
                 font-weight: bold
+
+#pagination
+    .previous, .next
+        position: fixed
+        top: 50%
+        left: 50%
+        font-size: 40px
+
+    .previous
+        margin-left: 320px
+    
+    .next
+        margin-left: -376px
+
+    a
+        opacity: 0.25
+
+        &:hover
+            opacity: 1
 
 #content
     .wrapper
@@ -110,7 +125,7 @@ ul
                 &:not(:last-child)
                     margin-right: 10px
 
-        &.post
+        &.text
             blockquote
                 margin-left: 20px
                 padding-left: 15px
@@ -135,7 +150,7 @@ ul
 
 #footer
     color: #999
-    padding: 30px 40px 50px 40px
+    padding: 40px
     text-align: center
 
     ul

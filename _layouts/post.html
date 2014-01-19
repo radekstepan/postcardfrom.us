@@ -2,9 +2,17 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
-{{ content }}
+<div id="pagination">
+{% if page.next %}
+    <div class="next">
+        <a href="{{ page.next.url }}"><span class="icon left-open"></span></a>
+    </div>
+{% endif %}
+{% if page.previous %}
+    <div class="previous">
+      <a href="{{ page.previous.url }}"><span class="icon right-open"></span></a>
+    </div>
+{% endif %}
 </div>
+
+{% include post.html detail="yes" %}

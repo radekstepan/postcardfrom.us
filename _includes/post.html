@@ -1,0 +1,28 @@
+<div class="wrapper {{ page.type }}">
+    {% if page.photos %}
+        {% for photo in page.photos %}
+        <div class="photo">
+            <a>
+                <img src="{{ site.baseurl }}/assets/photos/{{ photo }}" />
+            </a>
+        </div>
+        {% endfor %}
+    {% endif %}
+
+    {% case include.detail %}
+        {% when 'yes' %}
+            <h2 class="title">{{ page.title }}</h2>
+            <div class="content">{{ content }}</div>
+        {% when 'no' %}
+            <h2 class="title"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+            <div class="content">{{ page.content }}</div>
+    {% endcase %}
+
+    <ul class="tags">
+    {% for tag in page.tags %}
+        <li>#{{ tag }}</li>
+    {% endfor %}
+    </ul>
+
+    <div class="meta">{{ page.date | date_to_string }}</div>
+</div>

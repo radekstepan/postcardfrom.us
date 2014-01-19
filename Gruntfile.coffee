@@ -6,6 +6,7 @@ module.exports = (grunt) ->
             compile:
                 src: [
                     '_style/fonts.styl'
+                    '_style/icons.styl'
                     '_style/main.styl'
                 ]
                 dest: 'assets/css/main.css'

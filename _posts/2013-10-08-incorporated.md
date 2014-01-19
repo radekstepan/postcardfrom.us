@@ -1,5 +1,6 @@
 ---
 layout: post
+type:   text
 title:  "Fresh Grass Wallpaper"
 date:   2014-01-18 13:07:53
 photos: [ fresh-grass.jpg ]
