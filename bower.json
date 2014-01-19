@@ -2,6 +2,7 @@
     "name": "voyage-pacifique",
     "version": "0.0.0",
     "dependencies": {
-        "foundation": "5.0.2"
+        "foundation": "5.0.2",
+        "normalize-css": "~2.1.3"
     }
 }

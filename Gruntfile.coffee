@@ -13,11 +13,9 @@ module.exports = (grunt) ->
         concat:
             styles:
                 src: [
-                    'vendor/foundation/css/normalize.css'
-                    'vendor/foundation/css/foundation.css'
-                    # Our styles.
-                    '_src/fonts.css'
-                    'assets/css/main.css'
+                    'vendor/normalize-css/normalize.css'
+                    '_src/main.css'
+                    '_src/highlight.css'
                 ]
                 dest: 'assets/css/all.css'
 
@@ -25,6 +23,6 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-contrib-concat')
 
     grunt.registerTask('default', [
-        'stylus'
+        #'stylus'
         'concat'
     ])
