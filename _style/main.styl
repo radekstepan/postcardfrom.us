@@ -1,0 +1,127 @@
+@import 'nib'
+
+body
+    background: #FFF
+    color: #898989
+    font-family: "Domine"
+    font-size: 12px
+
+h1, h2, h3, h4, h5, .title
+    font-family: "Raleway"
+    margin: 0 0 15px 0
+    font-weight: 600
+
+h2
+    font-size: 30px
+    line-height: 45px
+
+h2
+    font-size: 24px
+    line-height: 36px
+
+h3
+    font-size: 18px
+    line-height: 27px
+
+h4
+    font-size: 12px
+
+h5
+    font-size: 10px
+
+a
+    text-decoration: none
+    color: #20676a
+    cursor: pointer
+
+    &:hover
+        opacity: 0.6
+        transition: opacity .15s ease-in-out
+
+p
+    line-height: 22px
+
+blockquote
+    margin-left: 20px
+    padding-left: 15px
+    border-left: 3px solid #898989
+
+ul
+    list-style-type: none
+    padding: 0
+
+    li
+        display: inline-block
+
+#top
+    background: #f4f8f3
+    padding-bottom: 70px
+
+#header
+    padding: 70px 0 40px 0
+    text-align: center
+    
+    .title
+        font-size: 18px
+        font-weight: bold
+        color: #20676a
+
+    ul
+        margin-top: 20px
+
+        li
+            margin: 0 10px
+            
+            a
+                color: #7fa5a7
+                font-weight: bold
+
+#content
+    .wrapper
+        background: #fff
+        border-radius: 5px
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05)
+        padding: 70px
+        margin: 0 auto
+        width: 500px
+
+        &:not(:last-child)
+            margin-bottom: 70px
+
+        &.post
+            .photo
+                margin-bottom: 20px
+
+                img
+                    max-width: 100%
+                    height: auto
+
+            .content
+                margin: 20px 0
+
+                p, blockquote
+                    text-align: justify
+
+            .tags, .meta
+                margin-top: 10px
+                color: #bbb
+
+            .tags
+                li
+                    &:not(:last-child)
+                        margin-right: 10px
+
+#footer
+    color: #999
+    padding: 30px 40px 50px 40px
+    text-align: center
+
+    ul
+        li
+            margin: 0 10px
+
+            a
+                font-weight: bold
+
+    .small
+        font-size: 11px

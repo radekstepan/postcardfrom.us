@@ -5,6 +5,7 @@ module.exports = (grunt) ->
         stylus:
             compile:
                 src: [
+                    '_style/fonts.styl'
                     '_style/main.styl'
                 ]
                 dest: 'assets/css/main.css'
@@ -12,8 +13,7 @@ module.exports = (grunt) ->
         concat:
             styles:
                 src: [
-                    'vendor/foundation/css/normalize.css'
-                    'vendor/foundation/css/foundation.css'
+                    'vendor/normalize-css/normalize.css'
                 ]
                 dest: 'assets/css/vendor.css'
 

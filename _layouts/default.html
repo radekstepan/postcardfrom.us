@@ -9,29 +9,31 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 </head>
 <body>
-    <div class="site">
-        <div class="header">
-            <h1 class="title"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <a class="extra" href="{{ site.baseurl }}/">home</a>
+    <div id="top">
+        <div id="header">
+            <a class="title" href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">schedule</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
         </div>
 
-        {{ content }}
-
-        <div class="footer">
-            <div class="contact">
-                <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-                </p>
-            </div>
-            <div class="contact">
-                <p>
-                    <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                    <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-                </p>
-            </div>
+        <div id="content">
+            {{ content }}
         </div>
+    </div>
+
+    <div id="footer">
+        <p>Jekyll traverses your site looking for files to process.</p>
+
+        <ul>
+            <li><a href="#">about</a></li>
+            <li><a href="#">schedule</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+
+        <p class="small">Powered by Jekyll</p>
     </div>
 </body>
 </html>
