@@ -2,8 +2,8 @@
     {% if page.photos %}
         {% for photo in page.photos %}
         <div class="photo">
-            <a>
-                <img src="{{ site.baseurl }}/assets/photos/{{ photo }}" />
+            <a target="{{ photo }}" href="{{ site.baseurl }}/assets/photos/{{ photo }}">
+                <img alt="{{ page.title }} - {{ photo }}" src="{{ site.baseurl }}/assets/photos/{{ photo }}" />
             </a>
         </div>
         {% endfor %}
