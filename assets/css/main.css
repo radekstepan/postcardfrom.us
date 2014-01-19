@@ -14,6 +14,7 @@ h5{font-size:10px}
 a{text-decoration:none;color:#20676a;cursor:pointer;}
 a:hover{opacity:.6;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";filter:alpha(opacity=60);-webkit-transition:opacity 0.15s ease-in-out;-moz-transition:opacity 0.15s ease-in-out;-o-transition:opacity 0.15s ease-in-out;-ms-transition:opacity 0.15s ease-in-out;transition:opacity 0.15s ease-in-out}
 p{line-height:22px}
+hr{border:0;border-bottom:1px dotted #ccc;margin:25px -70px}
 ul{list-style-type:none;padding:0;}
 ul li{display:inline-block}
 #top{background:#f4f8f3;padding-bottom:70px}
