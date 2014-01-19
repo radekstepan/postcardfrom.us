@@ -72,25 +72,6 @@ ul
                 color: #7fa5a7
                 font-weight: bold
 
-#pagination
-    .previous, .next
-        position: fixed
-        top: 50%
-        left: 50%
-        font-size: 40px
-
-    .previous
-        margin-left: 320px
-    
-    .next
-        margin-left: -376px
-
-    a
-        opacity: 0.25
-
-        &:hover
-            opacity: 1
-
 #content
     .wrapper
         background: #fff
@@ -147,6 +128,43 @@ ul
                 p
                     margin: 0
                     line-height: 34px
+
+#flip
+    .previous, .next
+        position: fixed
+        top: 50%
+        left: 50%
+        font-size: 40px
+
+    .previous
+        margin-left: 320px
+    
+    .next
+        margin-left: -376px
+
+    a
+        opacity: 0.25
+
+        &:hover
+            opacity: 1
+
+#pagination
+    margin: 0 auto
+    width: 640px
+    position: relative
+    height: 16px
+
+    .newer, .older
+        position: absolute
+        font-weight: bold
+        font-family: "Raleway"
+        font-size: 14px
+
+    .newer
+        left: 0
+
+    .older
+        right: 0
 
 #footer
     color: #999

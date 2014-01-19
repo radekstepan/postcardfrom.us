@@ -2,6 +2,8 @@
 layout: default
 ---
 
-{% for page in site.posts %}
+{% for page in paginator.posts %}
 {% include post.html detail="no" %}
 {% endfor %}
+
+{% include pagination.html %}
