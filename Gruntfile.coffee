@@ -5,9 +5,10 @@ module.exports = (grunt) ->
         stylus:
             compile:
                 src: [
-                    '_style/fonts.styl'
-                    '_style/icons.styl'
-                    '_style/main.styl'
+                    '_styles/pygments.styl'
+                    '_styles/fonts.styl'
+                    '_styles/icons.styl'
+                    '_styles/main.styl'
                 ]
                 dest: 'assets/css/main.css'
 
