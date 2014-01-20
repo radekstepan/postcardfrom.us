@@ -18,11 +18,20 @@
             <div class="content">{{ page.content }}</div>
     {% endcase %}
 
-    <ul class="tags">
+    {% if page.tags.first %}
+    <ul class="meta icon tag-empty">
     {% for tag in page.tags %}
         <li>#{{ tag }}</li>
     {% endfor %}
     </ul>
+    {% endif %}
 
-    <div class="meta">{{ page.date | date_to_string }}</div>
+    {% if page.location %}
+    {{ page.location.arr[0] }}
+    <div class="meta icon location-outline">
+        <a target="_{{ page.location.ddd }}" href="http://maps.google.com/?q={{ page.location.ddd | join: ',' }}">{{ page.location.name }}</a>
+    </div>
+    {% endif %}
+
+    <div class="meta icon clock-1">{{ page.date | date_to_string }}</div>
 </div>

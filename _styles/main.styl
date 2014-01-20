@@ -90,6 +90,11 @@ pre
                 color: #7fa5a7
                 font-weight: bold
 
+#links
+    .icon
+        &:before
+            margin-right: 4px
+
 #content
     .wrapper
         background: #fff
@@ -115,14 +120,18 @@ pre
             p, blockquote
                 text-align: justify
 
-        .tags, .meta
+        .meta
             margin-top: 15px
             color: #bbb
 
-        .tags
-            li
-                &:not(:last-child)
-                    margin-right: 10px
+            &.icon
+                &:before
+                    margin-right: 6px
+
+            &.tags
+                li
+                    &:not(:last-child)
+                        margin-right: 10px
 
         &.text
             blockquote
@@ -153,12 +162,13 @@ pre
         top: 50%
         left: 50%
         font-size: 40px
+        padding: 10px
 
     .previous
-        margin-left: 320px
+        margin-left: 330px
     
     .next
-        margin-left: -376px
+        margin-left: -364px
 
     a
         opacity: 0.25
@@ -181,8 +191,14 @@ pre
     .newer
         left: 0
 
+        .icon
+            margin-right: 6px
+
     .older
         right: 0
+
+        .icon
+            margin-left: 6px
 
 #footer
     color: #999
