@@ -78,7 +78,7 @@ div.highlight .il{color:#ae81ff}
 
 body{background:#f4f8f3;color:#898989;font-family:"Domine";font-size:12px}
 h1,h2,h3,h4,h5,.title{font-family:"Raleway";margin:0 0 15px 0;font-weight:600}
-h2{font-size:30px;line-height:45px}
+h1{font-size:30px;line-height:45px}
 h2{font-size:24px;line-height:36px}
 h3{font-size:18px;line-height:27px}
 h4{font-size:12px}
@@ -105,7 +105,7 @@ pre{margin:0 -70px;padding:10px 70px}
 #content .wrapper .tags li:not(:last-child){margin-right:10px}
 #content .wrapper.text blockquote{margin-left:20px;padding-left:15px;border-left:3px solid #898989;}
 #content .wrapper.text blockquote p{margin:0}
-#content .wrapper.quote h2.title{display:none}
+#content .wrapper.quote .title{display:none}
 #content .wrapper.quote blockquote{margin:0;font-weight:normal;font-size:28px;letter-spacing:-1px;}
 #content .wrapper.quote blockquote p{margin:0;line-height:34px}
 #flip .previous,#flip .next{position:fixed;top:50%;left:50%;font-size:40px}
