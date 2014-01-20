@@ -2,6 +2,12 @@
 
 ##Jekyll
 
+Install:
+
+```bash
+$ gem install jekyll
+```
+
 Watch & serve:
 
 ```bash
@@ -32,10 +38,4 @@ Watch styles and scripts and build them using `Grunt`:
 
 ```bash
 $ watch --color -n 1 grunt
-```
-
-To minify for production:
-
-```bash
-$ grunt minify
 ```
