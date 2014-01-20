@@ -67,16 +67,14 @@ div.highlight .il{color:#ae81ff}
 @font-face{font-family:'Icons';src:url("../fonts/icons.eot?16565305");src:url("../fonts/icons.eot?16565305#iefix") format('embedded-opentype'),url("../fonts/icons.woff?16565305") format('woff'),url("../fonts/icons.ttf?16565305") format('truetype'),url("../fonts/icons.svg?16565305#icons") format('svg');font-weight:normal;font-style:normal}
 
 .icon:before{font-family:"Icons";font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em}
-.icon.user:before{content:'\e800'}
-.icon.search:before{content:'\e801'}
-.icon.link:before{content:'\e800'}
+.icon.rss-squared:before{content:'\e800'}
+.icon.mail:before{content:'\e801'}
 .icon.location:before{content:'\e802'}
-.icon.clock-1:before{content:'\e805'}
-.icon.hourglass:before{content:'\e804'}
-.icon.left-open:before{content:'\e806'}
 .icon.right-open:before{content:'\e803'}
+.icon.clock-1:before{content:'\e805'}
+.icon.left-open:before{content:'\e806'}
 
-body{background:#f4f8f3;color:#898989;font-family:"Domine";font-size:12px}
+body{background:#f4f8f3;color:#898989;font-family:"Domine";font-size:13px}
 h1,h2,h3,h4,h5,.title{font-family:"Raleway";margin:0 0 15px 0;font-weight:600}
 h1{font-size:30px;line-height:45px}
 h2{font-size:24px;line-height:36px}
@@ -92,7 +90,7 @@ ul li{display:inline-block}
 pre{margin:0 -70px;padding:10px 70px}
 #header{padding:70px 0 40px 0;text-align:center;}
 #header:before{content:"";display:block;position:absolute;top:46px;left:50%;right:50%;background:url("../img/favicon.png") no-repeat 0 0;width:16px;height:16px;margin-left:-16px}
-#header .title{font-size:18px;font-weight:bold;color:#20676a;padding:10px}
+#header .title{font-size:18px;font-weight:bold;color:#20676a;padding:10px;text-shadow:1px 1px 0 #fff}
 #header ul{margin-top:20px;}
 #header ul li{margin:0 10px;}
 #header ul li a{color:#7fa5a7;font-weight:bold}
