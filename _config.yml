@@ -1,9 +1,13 @@
 # Name of the site.
 name:        Voyage dans le Pacifique
+# Description of the site.
+description: A description for your blog
 # Center on UK.
 timezone:    Europe/London
 # Publish articles with a future date.
 future:      true
+# Site url.
+url:         http://radekstepan.com/voyage-pacifique
 # Site prefix for assets when running on GitHub Pages.
 baseurl:     /voyage-pacifique
 # Ignore Node.js stuff.

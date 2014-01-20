@@ -12,11 +12,8 @@
 <body>
     <div id="header">
         <a class="title" href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-        <ul>
-            <li><a href="#">about</a></li>
-            <li><a href="#">schedule</a></li>
-            <li><a href="#">contact</a></li>
-        </ul>
+        
+        {% include links.html %}
     </div>
 
     <div id="content">
@@ -26,11 +23,7 @@
     <div id="footer">
         <p>Jekyll traverses your site looking for files to process.</p>
 
-        <ul>
-            <li><a href="#">about</a></li>
-            <li><a href="#">schedule</a></li>
-            <li><a href="#">contact</a></li>
-        </ul>
+        {% include links.html %}
 
         <p class="small">Powered by Jekyll</p>
     </div>
