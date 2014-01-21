@@ -1,4 +1,5 @@
 <div class="wrapper {{ page.type }}">
+    <!-- photos -->
     {% if page.photos %}
         {% for photo in page.photos %}
         <div class="photo">
@@ -9,14 +10,32 @@
         {% endfor %}
     {% endif %}
 
+    <!-- page details -->
     {% if isDetail %}
-        <h1 class="title">{{ page.title }}</h1>
+        {% case page.type %}
+            <!-- link posts -->
+            {% when 'link' %}
+                <h1 class="title"><a href="{{ page.href | prepend: site.baseurl }}">{{ page.title }} <span class="icon right-small"></span></a></h1>
+            <!-- other -->
+            {% else %}
+                <h1 class="title">{{ page.title }}</h1>
+        {% endcase %}
         <div class="content">{{ content }}</div>
+    <!-- index -->
     {% else %}
-        <h2 class="title"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
+        {% case page.type %}
+            <!-- link posts -->
+            {% when 'link' %}
+                {% assign url = page.href %}
+            <!-- other -->
+            {% else %}
+                {% assign url = page.url %}
+        {% endcase %}
+        <h2 class="title"><a href="{{ url | prepend: site.baseurl }}">{{ page.title }} <span class="icon right-small"></span></a></h2>
         <div class="content">{{ page.content }}</div>
     {% endif %}
 
+    <!-- tags -->
     {% if page.tags.first %}
     <ul class="meta tags icon tag-empty">
     {% for tag in page.tags %}
@@ -25,12 +44,14 @@
     </ul>
     {% endif %}
 
+    <!-- location -->
     {% if page.location %}
     {{ page.location.arr[0] }}
     <div class="meta icon location-outline">
-        <a target="_{{ page.location.ddd }}" href="http://maps.google.com/?q={{ page.location.ddd | join: ',' }}">{{ page.location.name }}</a>
+        <a href="http://maps.google.com/?q={{ page.location.ddd | join: ',' }}">{{ page.location.name }}</a>
     </div>
     {% endif %}
 
+    <!-- date -->
     <div class="meta icon clock-1">{{ page.date | date_to_string }}</div>
 </div>

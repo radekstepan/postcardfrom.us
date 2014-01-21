@@ -68,11 +68,13 @@ div.highlight .il{color:#ae81ff}
 
 .icon:before{font-family:"Icons";font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;text-align:center;font-variant:normal;text-transform:none;line-height:1em}
 .icon.rss-squared:before{content:'\e800'}
+.icon.right-small:before{content:'\e801'}
 .icon.location-outline:before{content:'\e802'}
 .icon.right-open:before{content:'\e803'}
 .icon.tag-empty:before{content:'\e804'}
 .icon.clock-1:before{content:'\e805'}
 .icon.left-open:before{content:'\e806'}
+.icon.left-small:before{content:'\e807'}
 
 body{background:#f4f8f3;color:#898989;font-family:"Domine";font-size:13px}
 h1,h2,h3,h4,h5,.title{font-family:"Raleway";margin:0 0 15px 0;font-weight:600}
@@ -98,6 +100,7 @@ pre{margin:0}
 #links .icon:before{margin-right:4px}
 #content .wrapper{background:#fff;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.05);box-shadow:0 1px 2px rgba(0,0,0,0.05);padding:70px;margin:0 auto;width:500px;}
 #content .wrapper:not(:last-child){margin-bottom:70px}
+#content .wrapper h1 .icon,#content .wrapper h2 .icon{display:none}
 #content .wrapper .photo{margin-bottom:20px;}
 #content .wrapper .photo img{max-width:100%;height:auto}
 #content .wrapper .content{margin:20px 0;}
@@ -112,6 +115,7 @@ pre{margin:0}
 #content .wrapper.quote .title{display:none}
 #content .wrapper.quote blockquote{margin:0;font-weight:normal;font-size:28px;letter-spacing:-1px;}
 #content .wrapper.quote blockquote p{margin:0;line-height:34px}
+#content .wrapper.link h1 .icon,#content .wrapper.link h2 .icon{display:inline-block}
 #content .wrapper.tags h4:not(:first-child){margin-top:30px}
 #content .wrapper.tags h4 a{color:inherit}
 #content .wrapper.tags ul li{display:block;margin:4px 0;}

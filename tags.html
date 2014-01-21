@@ -4,6 +4,8 @@ title:  Tags
 ---
 
 <div class="wrapper tags">
+    <h1>Tags</h1>
+    
     {% for tag in site.tags %}
     {% assign name = tag | first | cgi_escape %}
     <h4><a href="#{{ name }}" name="{{ name }}">#{{ tag | first }}</a></h4>
