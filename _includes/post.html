@@ -9,19 +9,18 @@
         {% endfor %}
     {% endif %}
 
-    {% case include.detail %}
-        {% when 'yes' %}
-            <h1 class="title">{{ page.title }}</h1>
-            <div class="content">{{ content }}</div>
-        {% when 'no' %}
-            <h2 class="title"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
-            <div class="content">{{ page.content }}</div>
-    {% endcase %}
+    {% if isDetail %}
+        <h1 class="title">{{ page.title }}</h1>
+        <div class="content">{{ content }}</div>
+    {% else %}
+        <h2 class="title"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
+        <div class="content">{{ page.content }}</div>
+    {% endif %}
 
     {% if page.tags.first %}
-    <ul class="meta icon tag-empty">
+    <ul class="meta tags icon tag-empty">
     {% for tag in page.tags %}
-        <li>#{{ tag }}</li>
+        <li><a href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}">#{{ tag }}</a></li>
     {% endfor %}
     </ul>
     {% endif %}

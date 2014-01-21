@@ -83,11 +83,12 @@ h4{font-size:12px}
 h5{font-size:10px}
 a{text-decoration:none;color:#20676a;cursor:pointer;}
 a:hover{opacity:.6;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";filter:alpha(opacity=60);-webkit-transition:opacity 0.15s ease-in-out;-moz-transition:opacity 0.15s ease-in-out;-o-transition:opacity 0.15s ease-in-out;-ms-transition:opacity 0.15s ease-in-out;transition:opacity 0.15s ease-in-out}
+a:focus{outline:none}
 p{line-height:22px}
 hr{border:0;border-bottom:1px dotted #ccc;margin:25px -70px}
 ul{list-style-type:none;padding:0;}
 ul li{display:inline-block}
-pre{margin:0 -70px;padding:10px 70px}
+pre{margin:0}
 #header{padding:70px 0 40px 0;text-align:center;}
 #header:before{content:"";display:block;position:absolute;top:46px;left:50%;right:50%;background:url("../img/favicon.png") no-repeat 0 0;width:16px;height:16px;margin-left:-16px}
 #header .title{font-size:18px;font-weight:bold;color:#20676a;padding:10px;text-shadow:1px 1px 0 #fff}
@@ -103,12 +104,18 @@ pre{margin:0 -70px;padding:10px 70px}
 #content .wrapper .content p,#content .wrapper .content blockquote{text-align:justify}
 #content .wrapper .meta{margin-top:15px;color:#bbb;}
 #content .wrapper .meta.icon:before{margin-right:6px}
-#content .wrapper .meta.tags li:not(:last-child){margin-right:10px}
+#content .wrapper .meta.tags li:not(:last-child){margin-right:4px;}
+#content .wrapper .meta.tags li:not(:last-child):after{content:",";display:inline-block}
 #content .wrapper.text blockquote{margin-left:20px;padding-left:15px;border-left:3px solid #898989;}
 #content .wrapper.text blockquote p{margin:0}
+#content .wrapper.text pre{margin:0 -70px;padding:10px 70px}
 #content .wrapper.quote .title{display:none}
 #content .wrapper.quote blockquote{margin:0;font-weight:normal;font-size:28px;letter-spacing:-1px;}
 #content .wrapper.quote blockquote p{margin:0;line-height:34px}
+#content .wrapper.tags h4:not(:first-child){margin-top:30px}
+#content .wrapper.tags h4 a{color:inherit}
+#content .wrapper.tags ul li{display:block;margin:4px 0;}
+#content .wrapper.tags ul li .date{display:inline-block;font-size:12px;margin-right:6px}
 #flip .previous,#flip .next{position:fixed;top:50%;left:50%;font-size:40px;padding:10px}
 #flip .previous{margin-left:330px}
 #flip .next{margin-left:-364px}

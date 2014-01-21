@@ -38,6 +38,9 @@ a
         opacity: 0.6
         transition: opacity .15s ease-in-out
 
+    &:focus
+        outline: none
+
 p
     line-height: 22px
 
@@ -54,8 +57,7 @@ ul
         display: inline-block
 
 pre
-    margin: 0 -70px
-    padding: 10px 70px
+    margin: 0
 
 #header
     padding: 70px 0 40px 0
@@ -131,7 +133,11 @@ pre
             &.tags
                 li
                     &:not(:last-child)
-                        margin-right: 10px
+                        margin-right: 4px
+
+                        &:after
+                            content: ","
+                            display: inline-block
 
         &.text
             blockquote
@@ -141,6 +147,10 @@ pre
 
                 p
                     margin: 0
+
+            pre
+                margin: 0 -70px
+                padding: 10px 70px
 
         &.quote
             .title
@@ -155,6 +165,24 @@ pre
                 p
                     margin: 0
                     line-height: 34px
+
+        &.tags
+            h4
+                &:not(:first-child)
+                    margin-top: 30px
+
+                a
+                    color: inherit
+
+            ul
+                li
+                    display: block
+                    margin: 4px 0
+
+                    .date
+                        display: inline-block
+                        font-size: 12px
+                        margin-right: 6px
 
 #flip
     .previous, .next

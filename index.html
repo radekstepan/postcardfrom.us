@@ -2,8 +2,9 @@
 layout: default
 ---
 
+{% assign isDetail = false %}
 {% for page in paginator.posts %}
-{% include post.html detail="no" %}
+    {% include post.html %}
 {% endfor %}
 
 {% include pagination.html %}
