@@ -1,9 +1,10 @@
 ---
-layout: post
-type:   text
-date:   2013-11-10 13:07:53
-photos: [ plane.jpg, sky.jpg, river.jpg ]
-tags:   [ minimal, photography, photoset ]
+layout:   post
+type:     text
+date:     2013-11-10 13:07:53
+photos:   [ plane.jpg, sky.jpg, river.jpg ]
+tags:     [ minimal, photography, photoset ]
+category: cz
 location:
     name: Cambridge, UK
     ddd:  [ 52.205, 0.119 ]
