@@ -1,5 +1,9 @@
 #Voyage dans le Pacifique
 
+Travel log in Jekyll.
+
+![image](https://raw.github.com/radekstepan/voyage-pacifique/gh-pages/example.jpg)
+
 ##Jekyll
 
 Install:
