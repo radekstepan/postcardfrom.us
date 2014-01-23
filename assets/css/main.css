@@ -100,7 +100,7 @@ pre{margin:0}
 #content:after{clear:both;display:block;content:""}
 #content .more{position:absolute;bottom:0;text-align:center;width:100%;font-weight:bold;font-size:14px;}
 #content .more .icon{margin:0 6px}
-#content .wrapper{background:#fff;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.05);box-shadow:0 1px 2px rgba(0,0,0,0.05);padding:70px;margin:0 auto;width:500px;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-o-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;margin-bottom:70px;}
+#content .wrapper{background:#fff;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.05);box-shadow:0 1px 2px rgba(0,0,0,0.05);padding:70px;margin:0 auto;width:500px;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-o-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;margin-bottom:60px;}
 #content .wrapper.animate{-webkit-transform:translateZ(400px) translateY(300px) rotateX(-90deg);-moz-transform:translateZ(400px) translateY(300px) rotateX(-90deg);-o-transform:translateZ(400px) translateY(300px) rotateX(-90deg);-ms-transform:translateZ(400px) translateY(300px) rotateX(-90deg);transform:translateZ(400px) translateY(300px) rotateX(-90deg);-webkit-animation:fallPerspective .8s ease-in-out forwards;-moz-animation:fallPerspective .8s ease-in-out forwards;-o-animation:fallPerspective .8s ease-in-out forwards;-ms-animation:fallPerspective .8s ease-in-out forwards;animation:fallPerspective .8s ease-in-out forwards}
 #content .wrapper h1 .icon,#content .wrapper h2 .icon{display:none}
 #content .wrapper .photo{margin-bottom:20px;}
@@ -122,7 +122,7 @@ pre{margin:0}
 #content .wrapper.tags h4 a{color:inherit}
 #content .wrapper.tags ul li{display:block;margin:4px 0;}
 #content .wrapper.tags ul li .date{display:inline-block;font-size:12px;margin-right:6px}
-#footer{color:#999;padding:40px;text-align:center;}
+#footer{color:#999;padding:0 40px;text-align:center;}
 #footer ul li{margin:0 10px;}
 #footer ul li a{font-weight:bold}
 #footer .small{font-size:11px}
