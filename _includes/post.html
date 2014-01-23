@@ -11,29 +11,16 @@
     {% endif %}
 
     <!-- page details -->
-    {% if isDetail %}
-        {% case page.type %}
-            <!-- link posts -->
-            {% when 'link' %}
-                <h1 class="title"><a href="{{ page.href | prepend: site.baseurl }}">{{ page.title }} <span class="icon right-small"></span></a></h1>
-            <!-- other -->
-            {% else %}
-                <h1 class="title">{{ page.title }}</h1>
-        {% endcase %}
-        <div class="content">{{ content }}</div>
-    <!-- index -->
-    {% else %}
-        {% case page.type %}
-            <!-- link posts -->
-            {% when 'link' %}
-                {% assign url = page.href %}
-            <!-- other -->
-            {% else %}
-                {% assign url = page.url %}
-        {% endcase %}
-        <h2 class="title"><a href="{{ url | prepend: site.baseurl }}">{{ page.title }} <span class="icon right-small"></span></a></h2>
-        <div class="content">{{ page.content }}</div>
-    {% endif %}
+    {% case page.type %}
+        <!-- link posts -->
+        {% when 'link' %}
+            {% assign url = page.href %}
+        <!-- other -->
+        {% else %}
+            {% assign url = page.url %}
+    {% endcase %}
+    <h2 class="title"><a href="{{ url | prepend: site.baseurl }}">{{ page.title }} <span class="icon right-small"></span></a></h2>
+    <div class="content">{{ content }}</div>
 
     <!-- tags -->
     {% if page.tags.first %}

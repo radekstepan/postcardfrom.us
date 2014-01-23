@@ -1,72 +1,65 @@
 <!-- index n+ posts. -->
-{% assign batch = 3 %}
-
-{% if site.categories[include.locale].size > batch %}
-<div id="more">
-    <a>Load more<span class="icon down-small"></span></a>
-</div>
-{% endif %}
+{% assign batch = 1 %}
 
 <!-- show at most n posts straight away -->
-{% assign isDetail = false %}
 {% for page in site.categories[include.locale] %}
     {% if forloop.index <= batch %}
     {% include post.html %}
     {% endif %}
 {% endfor %}
 
+{% if site.categories[include.locale].size > batch %}
+<p class="more">
+    <span class="icon down-small"></span>Scroll to reveal more articles<span class="icon down-small"></span>
+</p>
+{% endif %}
+
 <script>
 $(function() {
     var batch = {{ batch }},
-        // Index of further articles.
-        index = [
+        // Further articles.
+        more = [
         {% for post in site.categories[include.locale] %}
         {% if forloop.index > batch %}
         "{{ post.url | prepend: site.baseurl }}"{% unless forloop.last %},{% endunless %}
         {% endif %}
         {% endfor %}],
-        // Are we loading?
-        loading = false,
-        // Load more button.
-        more = $('#more a'),
+        // Are we ready?
+        ready = true,
         // Append all here.
-        target = $('#content');
+        target = $('#content')
+        // Uh, window & document.
+        w = $(window),
+        d = $(document),
+        // Scroll handler.
+        onScroll = null,
+        url = null
+        note = target.find('.more');
     
-    // Load more articles.
-    more.on('click', function (evt) {
-        if (loading) return;
-        loading = true;
-        $(this).addClass('loading');
-
-        // Shift n posts.
-        var jobs = [];
-        while (index.length && jobs.length != batch) {
-            jobs.push(index.shift());
-        }
-
-        // Fetch them all.
-        async.map(jobs, function(url, cb) {
-            $.get(url, function(html) {
-                cb(null, html);
-            }).fail(function() {
-                cb(false);
-            });
-        }, function(err, res) {
-            // Done.
-            loading = false;
-
-            if (err || !index.length) {
-                more.remove()
-                if (err) return;
+    // On scroll.
+    w.on('scroll', onScroll = function() {
+        if(w.scrollTop() + w.height() > d.height() - 100) {
+            w.unbind('scroll');
+            
+            // Load more articles.
+            if (!ready || (url = more.shift()) == null) {
+                return;
             } else {
-                more.removeClass('loading');
+                ready = false;
+                note.hide();
             }
 
-            // Append to DOM.
-            res.forEach(function(post) {
-                target.append($(post).addClass('animate'));
+            $.get(url, function(html) {
+                // Done.
+                ready = true;
+                w.bind('scroll', onScroll);
+                
+                note[ (more.length) ? 'show' : 'remove' ]();
+
+                // Append to DOM.
+                target.append($(html).addClass('animate'));
             });
-        });
+        }
     });
 });
 </script>

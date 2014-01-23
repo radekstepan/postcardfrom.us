@@ -16,7 +16,6 @@ module.exports = (grunt) ->
             scripts:
                 src: [
                     'vendor/jquery/jquery.js'
-                    'vendor/async/lib/async.js'
                 ]
                 dest: 'assets/js/vendor.js'
                 options:
