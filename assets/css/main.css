@@ -67,8 +67,9 @@ div.highlight .il{color:#ae81ff}
 @font-face{font-family:'Icons';src:url("../fonts/icons.eot?16565305");src:url("../fonts/icons.eot?16565305#iefix") format('embedded-opentype'),url("../fonts/icons.woff?16565305") format('woff'),url("../fonts/icons.ttf?16565305") format('truetype'),url("../fonts/icons.svg?16565305#icons") format('svg');font-weight:normal;font-style:normal}
 
 .icon:before{font-family:"Icons";font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;text-align:center;font-variant:normal;text-transform:none;line-height:1em}
-.icon.spin6:before{content:'\e801'}
+.icon.heart:before{content:'\e801'}
 .icon.rss-squared:before{content:'\e800'}
+.icon.right-small:before{content:'\e803'}
 .icon.clock-1:before{content:'\e805'}
 .icon.location-outline:before{content:'\e802'}
 .icon.down-small:before{content:'\e808'}

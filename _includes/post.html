@@ -3,7 +3,7 @@
     {% if page.photos %}
         {% for photo in page.photos %}
         <div class="photo">
-            <a target="{{ photo }}" href="{{ site.baseurl }}/assets/photos/{{ photo }}">
+            <a target="_{{ photo | cgi_escape | downcase }}" href="{{ site.baseurl }}/assets/photos/{{ photo }}">
                 <img alt="{{ page.title }} - {{ photo }}" src="{{ site.baseurl }}/assets/photos/{{ photo }}" />
             </a>
         </div>
@@ -14,12 +14,13 @@
     {% case page.type %}
         <!-- link posts -->
         {% when 'link' %}
-            {% assign url = page.href %}
+            <h2 class="title"><a target="_{{ page.title | cgi_escape | downcase }}" href="{{ page.href }}">{{ page.title }} <span class="icon right-small"></span></a></h2>
         <!-- other -->
         {% else %}
-            {% assign url = page.url %}
+            <h2 class="title"><a href="post.html#!{{ page.url | remove_first: page.category | replace: '//', '/' }}">{{ page.title }}</a></h2>
     {% endcase %}
-    <h2 class="title"><a href="{{ url | prepend: site.baseurl }}">{{ page.title }} <span class="icon right-small"></span></a></h2>
+    
+    <!-- the content -->
     <div class="content">{{ content }}</div>
 
     <!-- tags -->
@@ -35,7 +36,7 @@
     {% if page.location %}
     {{ page.location.arr[0] }}
     <div class="meta icon location-outline">
-        <a href="http://maps.google.com/?q={{ page.location.ddd | join: ',' }}">{{ page.location.name }}</a>
+        <a target="_{{ page.location.name | cgi_escape | downcase }}" href="http://maps.google.com/?q={{ page.location.ddd | join: ',' }}">{{ page.location.name }}</a>
     </div>
     {% endif %}
 
