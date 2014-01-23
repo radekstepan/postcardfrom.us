@@ -4,6 +4,7 @@
 <!-- show at most n posts straight away -->
 {% for page in site.categories[include.locale] %}
     {% if forloop.index <= batch %}
+    {% assign content = page.content %}
     {% include post.html %}
     {% endif %}
 {% endfor %}
