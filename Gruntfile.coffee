@@ -13,6 +13,15 @@ module.exports = (grunt) ->
                 dest: 'assets/css/main.css'
 
         concat:
+            scripts:
+                src: [
+                    'vendor/jquery/jquery.js'
+                    'vendor/async/lib/async.js'
+                ]
+                dest: 'assets/js/vendor.js'
+                options:
+                    separator: ';'
+            
             styles:
                 src: [
                     'vendor/normalize-css/normalize.css'

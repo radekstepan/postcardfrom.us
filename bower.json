@@ -1,7 +1,9 @@
 {
-    "name": "voyage-pacifique",
-    "version": "0.0.0",
-    "dependencies": {
-        "normalize-css": "~2.1.3"
-    }
+  "name": "voyage-pacifique",
+  "version": "0.0.0",
+  "dependencies": {
+    "normalize-css": "~2.1.3",
+    "async": "~0.2.5",
+    "jquery": "~2.0.3"
+  }
 }

@@ -1,0 +1,65 @@
+<!-- index n+ posts. -->
+{% assign batch = 1 %}
+
+{% if site.categories[include.locale].size > batch %}
+<div id="more">
+    <a>Load more<span class="icon down-small"></span></a>
+</div>
+{% endif %}
+
+<!-- show at most n posts straight away -->
+{% assign isDetail = false %}
+{% for page in site.categories[include.locale] %}
+    {% if forloop.index <= batch %}
+    {% include post.html %}
+    {% endif %}
+{% endfor %}
+
+<script>
+$(function() {
+    var batch = {{ batch }},
+        // Index of further articles.
+        index = [
+        {% for post in site.categories[include.locale] %}
+        {% if forloop.index > batch %}
+        "{{ post.url | prepend: site.baseurl }}"{% unless forloop.last %},{% endunless %}
+        {% endif %}
+        {% endfor %}],
+        // Are we loading?
+        loading = false,
+        // Load more button.
+        more = $('#more a'),
+        // Append all here.
+        target = $('#content');
+    
+    // Load more articles.
+    more.on('click', function (evt) {
+        if (loading) return;
+        loading = true;
+        $(this).addClass('loading');
+
+        // Shift n posts.
+        var jobs = [];
+        while (index.length && jobs.length != batch) {
+            jobs.push(index.shift());
+        }
+
+        // Fetch them all.
+        async.map(jobs, function(url, cb) {
+            $.get(url, function(html) {
+                cb(null, html);
+            });
+        }, function(err, res) {
+            if (!index.length) {
+                more.remove()
+            } else {
+                more.removeClass('loading');
+            }
+            // Append to DOM.
+            res.forEach(function(post) {
+                target.append($(post).addClass('animate'));
+            });
+        });
+    });
+});
+</script>
