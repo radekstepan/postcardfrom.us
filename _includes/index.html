@@ -1,5 +1,5 @@
 <!-- index n+ posts. -->
-{% assign batch = 1 %}
+{% assign batch = 3 %}
 
 {% if site.categories[include.locale].size > batch %}
 <div id="more">
@@ -48,13 +48,20 @@ $(function() {
         async.map(jobs, function(url, cb) {
             $.get(url, function(html) {
                 cb(null, html);
+            }).fail(function() {
+                cb(false);
             });
         }, function(err, res) {
-            if (!index.length) {
+            // Done.
+            loading = false;
+
+            if (err || !index.length) {
                 more.remove()
+                if (err) return;
             } else {
                 more.removeClass('loading');
             }
+
             // Append to DOM.
             res.forEach(function(post) {
                 target.append($(post).addClass('animate'));
