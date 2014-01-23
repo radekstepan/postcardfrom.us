@@ -1,3 +1,16 @@
 scroll:
     en: "Scroll to reveal more articles"
     cz: "Projeď pro další článek"
+
+links:
+    schedule:
+        en: "schedule"
+        cz: "program"
+
+    contact:
+        en: "contact"
+        cz: "kontakt"
+
+    feed:
+        en: "feed"
+        cz: "rss kanál"

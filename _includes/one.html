@@ -1,0 +1,25 @@
+<script>
+$(function() {    
+    var route, hash, url,
+        regex  = /^#!\/(\d{4}\/\d{1,2}\/\d{1,2}\/.*)$/,
+        root   = '{{ site.baseurl }}',
+        target = $('#content'),
+        locale = '{{ page.locale }}';
+
+    route = function() {
+        if (match = (hash = window.location.hash).match(regex)) {
+            url = [ root, locale, match[1] ].join('/');
+            $.get(url, function(html) {
+                target.html(html);
+            });
+        } else {
+            // No match...
+        }
+    };
+
+    if ('onhashchange' in window && 'hash' in window.location) {
+        window.addEventListener('hashchange', route, false);
+        route.call(null);
+    }
+});
+</script>

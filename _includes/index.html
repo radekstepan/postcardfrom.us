@@ -1,17 +1,15 @@
 <!-- index n+ posts. -->
-{% assign batch = 1 %}
+{% assign batch = 3 %}
 
 <!-- show at most n posts straight away -->
-{% for page in site.categories[include.locale] %}
-    {% if forloop.index <= batch %}
+{% for page in site.categories[page.locale] limit:batch %}
     {% assign content = page.content %}
     {% include post.html %}
-    {% endif %}
 {% endfor %}
 
-{% if site.categories[include.locale].size > batch %}
+{% if site.categories[page.locale].size > batch %}
 <p class="more">
-    <span class="icon down-small"></span>{{ site.data.i18n.scroll[include.locale] }}<span class="icon down-small"></span>
+    <span class="icon down-small"></span>{{ site.data.i18n.scroll[page.locale] }}<span class="icon down-small"></span>
 </p>
 {% endif %}
 
@@ -20,7 +18,7 @@ $(function() {
     var batch = {{ batch }},
         // Further articles.
         more = [
-        {% for post in site.categories[include.locale] %}
+        {% for post in site.categories[page.locale] %}
         {% if forloop.index > batch %}
         "{{ post.url | prepend: site.baseurl }}"{% unless forloop.last %},{% endunless %}
         {% endif %}
@@ -36,7 +34,7 @@ $(function() {
         onScroll = null,
         url = null
         note = target.find('.more');
-    
+
     // On scroll.
     w.on('scroll', onScroll = function() {
         if (w.scrollTop() + w.height() > d.height() - 100) {

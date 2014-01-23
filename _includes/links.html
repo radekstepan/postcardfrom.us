@@ -1,6 +1,5 @@
 <ul id="links">
-    <li><a href="{{ site.baseurl }}/about.html">about</a></li>
-    <li><a href="#">schedule</a></li>
-    <li><a href="#">contact</a></li>
-    <li><a href="{{ site.baseurl }}/feed.xml" class="icon rss-squared">feed</a></li>
+    <li><a href="{{ site.baseurl }}/{{ page.locale }}/schedule.html">{{ site.data.i18n.links.schedule[page.locale] }}</a></li>
+    <li><a href="mailto:user@domain.tld">{{ site.data.i18n.links.contact[page.locale] }}</a></li>
+    <li><a href="{{ site.baseurl }}/{{ page.locale }}/feed.xml" class="icon rss-squared">{{ site.data.i18n.links.feed[page.locale] }}</a></li>
 </ul>

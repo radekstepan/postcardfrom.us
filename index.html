@@ -1,10 +1,41 @@
 ---
-layout: page
+layout: html
 ---
 
-<div class="locale">
-    <h3>Choose your language/zvolte jazyk:</h3>
+<script>
+$(function() {
+    var locale, locate, redirect;
 
-    <a href="{{ site.baseurl }}/en/"><img src="{{ site.baseurl }}/assets/img/flag_gb_32.png" alt="english" /></a>
-    <a href="{{ site.baseurl }}/cz/"><img src="{{ site.baseurl }}/assets/img/flag_cz_32.png" alt="česky" /></a>
-</div>
+    // Locate the user.
+    locate = function(cb) {
+        $.getJSON('http://freegeoip.net/json/', function(data) {
+            cb((data.country_code == 'CZ') ? 'cz' : 'en');
+        // You are stuck with english.
+        }).fail(function() {
+            cb('en');
+        });
+    };
+
+    // Redirect to a locale specific index.
+    redirect = function(locale) {
+        window.location.replace(window.location.href + locale);
+    };
+
+    // Can use storage.
+    if (store.enabled) {
+        // Has locale, redirect to the index.
+        if (locale = store.get('locale')) {
+            redirect(locale);
+        // Locate, store and redirect to the index.
+        } else {
+            locate(function(locale) {
+                store.set('locale', locale);
+                redirect(locale);
+            });
+        }
+    // Locate and redirect to the index.
+    } else {
+        locate(redirect);
+    }
+});
+</script>

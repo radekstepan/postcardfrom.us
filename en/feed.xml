@@ -1,0 +1,5 @@
+---
+layout: nil
+locale: en
+---
+{% include rss.xml %}
