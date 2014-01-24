@@ -90,6 +90,7 @@ hr{border:0;border-bottom:1px dotted #ccc;margin:25px -70px}
 ul{list-style-type:none;padding:0;}
 ul li{display:inline-block}
 pre{margin:0}
+time{display:block}
 #header{padding:70px 0 40px 0;text-align:center;}
 #header:before{content:"";display:block;position:absolute;top:46px;left:50%;right:50%;background:url("../img/favicon.png") no-repeat 0 0;width:16px;height:16px;margin-left:-16px}
 #header .title{font-size:18px;font-weight:bold;color:#20676a;padding:10px;text-shadow:1px 1px 0 #fff}
@@ -112,8 +113,6 @@ pre{margin:0}
 #content .wrapper .content p,#content .wrapper .content blockquote{text-align:justify}
 #content .wrapper .meta{margin-top:15px;color:#bbb;}
 #content .wrapper .meta.icon:before{margin-right:6px}
-#content .wrapper .meta.tags li:not(:last-child){margin-right:4px;}
-#content .wrapper .meta.tags li:not(:last-child):after{content:",";display:inline-block}
 #content .wrapper.text blockquote{margin-left:20px;padding-left:15px;border-left:3px solid #898989;}
 #content .wrapper.text blockquote p{margin:0}
 #content .wrapper.text pre{margin:0 -70px;padding:10px 70px}
@@ -121,10 +120,13 @@ pre{margin:0}
 #content .wrapper.quote blockquote{margin:0;font-weight:normal;font-size:28px;letter-spacing:-1px;}
 #content .wrapper.quote blockquote p{margin:0;line-height:34px}
 #content .wrapper.link h1 .icon,#content .wrapper.link h2 .icon{display:inline-block}
-#content .wrapper.tags h4:not(:first-child){margin-top:30px}
-#content .wrapper.tags h4 a{color:inherit}
-#content .wrapper.tags ul li{display:block;margin:4px 0;}
-#content .wrapper.tags ul li .date{display:inline-block;font-size:12px;margin-right:6px}
+#content .wrapper.list article:not(:last-child){margin-bottom:30px}
+#content .wrapper.list article h1,#content .wrapper.list article time{display:inline-block}
+#content .wrapper.list article h1{font-size:16px;margin:0;line-height:20px}
+#content .wrapper.list article time{width:60px;text-transform:uppercase}
+#content .wrapper.list article ul.tags{margin:10px 0 0 64px}
+#content .wrapper ul.tags li:not(:last-child){margin-right:4px;}
+#content .wrapper ul.tags li:not(:last-child):after{content:",";display:inline-block}
 #footer{color:#999;padding:0 40px;text-align:center;}
 #footer ul li{margin:0 10px;}
 #footer ul li a{font-weight:bold}

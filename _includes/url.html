@@ -1,0 +1,6 @@
+{% case include.which %}
+{% when 'post' %}
+{{ site.baseurl | append: '/' | replace: '//', '/' }}{{ post.category }}/post/#!{{ post.url | remove_first: post.category | replace: '//', '/' }}
+{% when 'tag' %}
+{{ site.baseurl }}/{{ locale }}/tags/#!{{ tag | cgi_escape }}
+{% endcase %}

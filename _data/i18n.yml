@@ -2,6 +2,14 @@ scroll:
     en: "Scroll to reveal more articles"
     cz: "Projeď pro další článek"
 
+archive:
+    en: "Archive"
+    cz: "Archiv"
+
+tags:
+    en: "Tags"
+    cz: "Štítky"
+
 links:
     schedule:
         en: "schedule"

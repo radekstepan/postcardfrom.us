@@ -1,45 +1,46 @@
-<div class="wrapper {{ page.type }}">
+{% assign locale = post.category %}
+
+<div class="wrapper {{ post.type }}">
     <!-- photos -->
-    {% if page.photos %}
-        {% for photo in page.photos %}
+    {% if post.photos %}
+        {% for photo in post.photos %}
         <div class="photo">
             <a target="_{{ photo | cgi_escape | downcase }}" href="{{ site.baseurl }}/assets/photos/{{ photo }}">
-                <img alt="{{ page.title }} - {{ photo }}" src="{{ site.baseurl }}/assets/photos/{{ photo }}" />
+                <img alt="{{ post.title }} - {{ photo }}" src="{{ site.baseurl }}/assets/photos/{{ photo }}" />
             </a>
         </div>
         {% endfor %}
     {% endif %}
 
-    <!-- page details -->
-    {% case page.type %}
+    <!-- post details -->
+    {% case post.type %}
         <!-- link posts -->
         {% when 'link' %}
-            <h2 class="title"><a target="_{{ page.title | cgi_escape | downcase }}" href="{{ page.href }}">{{ page.title }} <span class="icon right-small"></span></a></h2>
+            <h2 class="title"><a target="_{{ post.title | cgi_escape | downcase }}" href="{{ post.href }}">{{ post.title }} <span class="icon right-small"></span></a></h2>
         <!-- other -->
         {% else %}
-            <h2 class="title"><a href="post.html#!{{ page.url | remove_first: page.category | replace: '//', '/' }}">{{ page.title }}</a></h2>
+            <h2 class="title"><a href="{% include url.html which='post' %}">{{ post.title }}</a></h2>
     {% endcase %}
     
     <!-- the content -->
     <div class="content">{{ content }}</div>
 
     <!-- tags -->
-    {% if page.tags.first %}
+    {% if post.tags.first %}
     <ul class="meta tags icon tag-empty">
-    {% for tag in page.tags %}
-        <li><a href="{{ site.baseurl }}/tags.html#{{ tag | cgi_escape }}">#{{ tag }}</a></li>
+    {% for tag in post.tags %}
+        <li><a href="{% include url.html which='tag' %}">#{{ tag }}</a></li>
     {% endfor %}
     </ul>
     {% endif %}
 
     <!-- location -->
-    {% if page.location %}
-    {{ page.location.arr[0] }}
+    {% if post.location %}
     <div class="meta icon location-outline">
-        <a target="_{{ page.location.name | cgi_escape | downcase }}" href="http://maps.google.com/?q={{ page.location.ddd | join: ',' }}">{{ page.location.name }}</a>
+        <a target="_{{ post.location.name | cgi_escape | downcase }}" href="http://maps.google.com/?q={{ post.location.ddd | join: ',' }}">{{ post.location.name }}</a>
     </div>
     {% endif %}
 
     <!-- date -->
-    <div class="meta icon clock-1 ago" title="{{ page.date }}">{{ page.date }}</div>
+    <time datetime="{{ post.date }}" method="ago" title="{{ post.date }}" class="meta icon clock-1"></time>
 </div>

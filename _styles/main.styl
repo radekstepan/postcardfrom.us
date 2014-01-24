@@ -61,6 +61,9 @@ ul
 pre
     margin: 0
 
+time
+    display: block
+
 #header
     padding: 70px 0 40px 0
     text-align: center
@@ -164,15 +167,6 @@ pre
                 &:before
                     margin-right: 6px
 
-            &.tags
-                li
-                    &:not(:last-child)
-                        margin-right: 4px
-
-                        &:after
-                            content: ","
-                            display: inline-block
-
         &.text
             blockquote
                 margin-left: 20px
@@ -205,23 +199,34 @@ pre
                 .icon
                     display: inline-block
 
-        &.tags
-            h4
-                &:not(:first-child)
-                    margin-top: 30px
+        &.list
+            article
+                &:not(:last-child)
+                    margin-bottom: 30px
 
-                a
-                    color: inherit
+                h1, time
+                    display: inline-block
 
-            ul
-                li
-                    display: block
-                    margin: 4px 0
+                h1
+                    font-size: 16px
+                    margin: 0
+                    line-height: 20px
 
-                    .date
+                time
+                    width: 60px
+                    text-transform: uppercase
+
+                ul.tags
+                    margin: 10px 0 0 64px
+
+        ul.tags
+            li
+                &:not(:last-child)
+                    margin-right: 4px
+
+                    &:after
+                        content: ","
                         display: inline-block
-                        font-size: 12px
-                        margin-right: 6px
 
 @keyframes fallPerspective {
     100% { transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }

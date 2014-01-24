@@ -11,16 +11,29 @@
     <script src="{{ site.baseurl }}/assets/js/vendor.js" type="text/javascript"></script>
     <script>
     (function() {
-        $(window).bind('postEvt', function() {
-            $('.ago').each(function() {
-                var el = $(this);
-                el.text(moment(el.text()).fromNow()).removeClass('ago');
+        // Listen for events.
+        $(window).bind('moment', function() {
+            $('time[method]').each(function() {
+                var el = $(this),
+                    datetime = moment(el.attr('datetime'));
+                switch(el.attr('method')) {
+                    // Short date format.
+                    case 'format':
+                        el.text(datetime.format("MMM Do")).removeAttr('method');
+                        break;
+                    // Time ago.
+                    case 'ago':
+                        el.text(datetime.fromNow()).removeAttr('method');
+                        break;
+                }
             });
         });
 
         $(function() {
+            // Set locale.
             moment.lang('{{ page.locale }}');
-            $.event.trigger('postEvt');
+            // On document ready, process the page.
+            $.event.trigger('moment');
         });
     })();
     </script>

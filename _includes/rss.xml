@@ -11,7 +11,7 @@
             <title>{{ post.title | xml_escape }}</title>
             <description>{{ post.content | xml_escape }}</description>
             <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-            <link>{{ site.url }}/{{ page.locale }}/post.html#!{{ post.url | remove_first: page.locale | replace: '//', '/' }}</link>
+            <link>{{ site.url }}/{{ page.locale }}/post/#!{{ post.url | remove_first: page.locale | replace: '//', '/' }}</link>
         </item>
         {% endfor %}
     </channel>
