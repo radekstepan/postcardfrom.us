@@ -11,6 +11,7 @@ $(function() {
             url = [ root, locale, match[1] ].join('/');
             $.get(url, function(html) {
                 target.html(html);
+                $.event.trigger('postEvt');
             });
         } else {
             // No match...

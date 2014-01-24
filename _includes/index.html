@@ -57,6 +57,7 @@ $(function() {
 
                 // Append to DOM.
                 target.append($(html).addClass('animate'));
+                $.event.trigger('postEvt');
             });
         }
     });

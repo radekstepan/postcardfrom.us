@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/vendor.css" type="text/css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" type="text/css">
     <script src="{{ site.baseurl }}/assets/js/vendor.js" type="text/javascript"></script>
+    <script>
+    (function() {
+        $(window).bind('postEvt', function() {
+            $('.ago').each(function() {
+                var el = $(this);
+                el.text(moment(el.text()).fromNow()).removeClass('ago');
+            });
+        });
+
+        $(function() {
+            moment.lang('{{ page.locale }}');
+            $.event.trigger('postEvt');
+        });
+    })();
+    </script>
 </head>
 <body>
     {{ content }}

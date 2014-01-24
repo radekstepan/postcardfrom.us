@@ -17,6 +17,8 @@ module.exports = (grunt) ->
                 src: [
                     'vendor/jquery/jquery.js'
                     'vendor/store.js/store.js'
+                    'vendor/moment/moment.js'
+                    'vendor/moment/lang/cs.js'
                 ]
                 dest: 'assets/js/vendor.js'
                 options:
