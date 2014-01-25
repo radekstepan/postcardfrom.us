@@ -21,3 +21,7 @@ contact:
 feed:
     en: "feed"
     cz: "rss kanál"
+
+random:
+    en: "random article"
+    cz: "náhodný článek"

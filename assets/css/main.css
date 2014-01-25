@@ -76,6 +76,7 @@
 .icon.down-small:before{content:'\e808'}
 .icon.tag-empty:before{content:'\e804'}
 .icon.emo-unhappy:before{content:'\e806'}
+.icon.shuffle:before{content:'\e807'}
 
 body{background:#f4f8f3;color:#7b7b7b;font-family:"charis_silregular";font-size:13px}
 h1,h2,h3,h4,h5,.title{font-family:"aller_lightregular";font-weight:400;margin:0 0 15px 0}

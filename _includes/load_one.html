@@ -14,6 +14,15 @@ $(function() {
         if (match = (hash = window.location.hash).match(regex)) {
             url = [ root, locale, match[1] ].join('/');
             $.get(url, function(html) {
+                // Can we save to store as a seen article?
+                if (store.enabled) {
+                    var seen = store.get('seen') || [];
+                    if (seen.indexOf(url) == -1) {
+                        seen.push(url);
+                        store.set('seen', seen);
+                    }
+                }
+
                 $.event.trigger('success');
                 target.html(html);
                 $.event.trigger('moment');

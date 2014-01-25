@@ -19,6 +19,7 @@ module.exports = (grunt) ->
                     'vendor/store.js/store.js'
                     'vendor/moment/moment.js'
                     'vendor/moment/lang/cs.js'
+                    'vendor/knuth-shuffle/index.js'
                 ]
                 dest: 'assets/js/vendor.js'
                 options:

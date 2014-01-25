@@ -1,0 +1,57 @@
+<script>
+$(function() {
+
+    var urls, seen, rand, fail, get;
+
+    // All the links.
+    urls = knuthShuffle([
+    {% for post in site.categories[page.locale] %}
+    "{{ post.url | prepend: site.baseurl }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}]);
+
+    fail = function() {
+        $.event.trigger('oops');
+    };
+
+    get = function(url) {
+        if (!url) return fail();
+
+        $.get(url, function(html) {
+            $.event.trigger('success');
+            $('#content').html(html);
+            $.event.trigger('moment');
+        }).fail(fail);
+    };
+
+    // Give us a random link not in a seen list.
+    rand = function() {
+        var url;
+        
+        // Have you seen it all?
+        if (seen.length >= urls.length) {
+            // Reset.
+            seen = [];
+        }
+
+        // Find the first url not in seen.
+        while ((url = urls.shift()) && seen.indexOf(url) >= 0);
+
+        // Seen it now.
+        seen.push(url);
+        store.set('seen', seen);
+
+        return url;
+    }
+
+    // Is store enabled.
+    if (store.enabled) {
+        // Get the ones we have seen already.
+        seen = store.get('seen') || [];
+        // Give us a random post that has not been seen yet.
+        get(rand());
+    } else {
+        // Just give us the head of the random list.
+        get(urls[0]);
+    }
+});
+</script>
