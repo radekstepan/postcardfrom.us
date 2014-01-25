@@ -4,7 +4,7 @@
 <!-- show at most n posts straight away -->
 {% for post in site.categories[page.locale] limit:batch %}
     {% assign content = post.content %}
-    {% include post.html %}
+    {% include post_full.html %}
 {% endfor %}
 
 {% if site.categories[page.locale].size > batch %}

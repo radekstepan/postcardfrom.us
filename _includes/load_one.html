@@ -10,7 +10,7 @@ $(function() {
         if (match = (hash = window.location.hash).match(regex)) {
             url = [ root, locale, match[1] ].join('/');
             $.get(url, function(html) {
-                target.html(html);
+                target.html($(html).addClass('animate'));
                 $.event.trigger('moment');
             });
         } else {

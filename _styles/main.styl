@@ -2,9 +2,11 @@
 
 $width = 500px
 
+$main_color = #1B676B
+
 body
     background: #f4f8f3
-    color: #898989
+    color: #7b7b7b
     font-family: "Domine"
     font-size: 13px
 
@@ -33,7 +35,7 @@ h5
 
 a
     text-decoration: none
-    color: #20676a
+    color: $main_color
     cursor: pointer
 
     &:hover
@@ -63,6 +65,7 @@ pre
 
 time
     display: block
+    white-space: nowrap
 
 #header
     padding: 70px 0 40px 0
@@ -83,7 +86,7 @@ time
     .title
         font-size: 18px
         font-weight: bold
-        color: #20676a
+        color: $main_color
         padding: 10px
         text-shadow: 1px 1px 0 #fff
 
@@ -96,6 +99,7 @@ time
             a
                 color: #7fa5a7
                 font-weight: bold
+                text-transform: lowercase
 
 #links
     .icon
@@ -161,7 +165,6 @@ time
 
         .meta
             margin-top: 15px
-            color: #bbb
 
             &.icon
                 &:before
@@ -200,24 +203,27 @@ time
                     display: inline-block
 
         &.list
-            article
+            .article
                 &:not(:last-child)
                     margin-bottom: 30px
 
-                h1, time
+                h2, time
                     display: inline-block
 
-                h1
+                h2
                     font-size: 16px
                     margin: 0
                     line-height: 20px
 
                 time
-                    width: 60px
+                    width: 70px
                     text-transform: uppercase
 
                 ul.tags
-                    margin: 10px 0 0 64px
+                    margin: 10px 0 0 74px
+
+            .tag.group
+                display: none
 
         ul.tags
             li

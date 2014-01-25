@@ -75,14 +75,14 @@ div.highlight .il{color:#ae81ff}
 .icon.down-small:before{content:'\e808'}
 .icon.tag-empty:before{content:'\e804'}
 
-body{background:#f4f8f3;color:#898989;font-family:"Domine";font-size:13px}
+body{background:#f4f8f3;color:#7b7b7b;font-family:"Domine";font-size:13px}
 h1,h2,h3,h4,h5,.title{font-family:"Raleway";margin:0 0 15px 0;font-weight:600}
 h1{font-size:30px;line-height:45px}
 h2{font-size:24px;line-height:36px}
 h3{font-size:18px;line-height:27px}
 h4{font-size:12px}
 h5{font-size:10px}
-a{text-decoration:none;color:#20676a;cursor:pointer;}
+a{text-decoration:none;color:#1b676b;cursor:pointer;}
 a:hover{opacity:.6;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";filter:alpha(opacity=60);-webkit-transition:opacity 0.15s ease-in-out;-moz-transition:opacity 0.15s ease-in-out;-o-transition:opacity 0.15s ease-in-out;-ms-transition:opacity 0.15s ease-in-out;transition:opacity 0.15s ease-in-out}
 a:focus{outline:none}
 p{line-height:22px}
@@ -90,13 +90,13 @@ hr{border:0;border-bottom:1px dotted #ccc;margin:25px -70px}
 ul{list-style-type:none;padding:0;}
 ul li{display:inline-block}
 pre{margin:0}
-time{display:block}
+time{display:block;white-space:nowrap}
 #header{padding:70px 0 40px 0;text-align:center;}
 #header:before{content:"";display:block;position:absolute;top:46px;left:50%;right:50%;background:url("../img/favicon.png") no-repeat 0 0;width:16px;height:16px;margin-left:-16px}
-#header .title{font-size:18px;font-weight:bold;color:#20676a;padding:10px;text-shadow:1px 1px 0 #fff}
+#header .title{font-size:18px;font-weight:bold;color:#1b676b;padding:10px;text-shadow:1px 1px 0 #fff}
 #header ul{margin-top:20px;}
 #header ul li{margin:0 10px;}
-#header ul li a{color:#7fa5a7;font-weight:bold}
+#header ul li a{color:#7fa5a7;font-weight:bold;text-transform:lowercase}
 #links .icon:before{margin-right:4px}
 #content{-webkit-perspective:1300px;-moz-perspective:1300px;-ms-perspective:1300px;perspective:1300px;padding-bottom:20px;}
 #content:after{clear:both;display:block;content:""}
@@ -111,7 +111,7 @@ time{display:block}
 #content .wrapper .photo img{max-width:100%;height:auto}
 #content .wrapper .content{margin:20px 0;}
 #content .wrapper .content p,#content .wrapper .content blockquote{text-align:justify}
-#content .wrapper .meta{margin-top:15px;color:#bbb;}
+#content .wrapper .meta{margin-top:15px;}
 #content .wrapper .meta.icon:before{margin-right:6px}
 #content .wrapper.text blockquote{margin-left:20px;padding-left:15px;border-left:3px solid #898989;}
 #content .wrapper.text blockquote p{margin:0}
@@ -120,11 +120,12 @@ time{display:block}
 #content .wrapper.quote blockquote{margin:0;font-weight:normal;font-size:28px;letter-spacing:-1px;}
 #content .wrapper.quote blockquote p{margin:0;line-height:34px}
 #content .wrapper.link h1 .icon,#content .wrapper.link h2 .icon{display:inline-block}
-#content .wrapper.list article:not(:last-child){margin-bottom:30px}
-#content .wrapper.list article h1,#content .wrapper.list article time{display:inline-block}
-#content .wrapper.list article h1{font-size:16px;margin:0;line-height:20px}
-#content .wrapper.list article time{width:60px;text-transform:uppercase}
-#content .wrapper.list article ul.tags{margin:10px 0 0 64px}
+#content .wrapper.list .article:not(:last-child){margin-bottom:30px}
+#content .wrapper.list .article h2,#content .wrapper.list .article time{display:inline-block}
+#content .wrapper.list .article h2{font-size:16px;margin:0;line-height:20px}
+#content .wrapper.list .article time{width:70px;text-transform:uppercase}
+#content .wrapper.list .article ul.tags{margin:10px 0 0 74px}
+#content .wrapper.list .tag.group{display:none}
 #content .wrapper ul.tags li:not(:last-child){margin-right:4px;}
 #content .wrapper ul.tags li:not(:last-child):after{content:",";display:inline-block}
 #footer{color:#999;padding:0 40px;text-align:center;}

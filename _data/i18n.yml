@@ -10,15 +10,14 @@ tags:
     en: "Tags"
     cz: "Štítky"
 
-links:
-    schedule:
-        en: "schedule"
-        cz: "program"
+schedule:
+    en: "schedule"
+    cz: "program"
 
-    contact:
-        en: "contact"
-        cz: "kontakt"
+contact:
+    en: "contact"
+    cz: "kontakt"
 
-    feed:
-        en: "feed"
-        cz: "rss kanál"
+feed:
+    en: "feed"
+    cz: "rss kanál"

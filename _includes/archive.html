@@ -4,21 +4,6 @@
     <h1>{{ site.data.i18n.archive[locale] }}</h1>
 
     {% for post in site.categories[locale] %}
-    <article>
-        <!-- date -->
-        <time datetime="{{ post.date }}" method="format" title="{{ post.date }}"></time>
-        
-        <!-- title -->
-        <h1><a href="{% include url.html which='post' %}">{{ post.title }}</a></h1>
-        
-        <!-- tags -->
-        {% if post.tags.first %}
-        <ul class="tags icon tag-empty">
-        {% for tag in post.tags %}
-            <li><a href="{% include url.html which='tag' %}">#{{ tag }}</a></li>
-        {% endfor %}
-        </ul>
-        {% endif %}
-    </article>
+        {% include post_short.html %}
     {% endfor %}
 </div>
