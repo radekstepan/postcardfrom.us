@@ -19,11 +19,17 @@
                 switch(el.attr('method')) {
                     // Short date format.
                     case 'format':
-                        el.text(datetime.format("MMM Do")).removeAttr('method');
+                        el
+                        .text(datetime.format("MMM Do"))
+                        .prop('title', datetime.format("Do MMMM YYYY"))
+                        .removeAttr('method');
                         break;
                     // Time ago.
                     case 'ago':
-                        el.text(datetime.fromNow()).removeAttr('method');
+                        el
+                        .text(datetime.fromNow())
+                        .prop('title', datetime.format("Do MMMM YYYY"))
+                        .removeAttr('method');
                         break;
                 }
             });
