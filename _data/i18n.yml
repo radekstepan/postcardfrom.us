@@ -21,3 +21,7 @@ feed:
 random:
     en: "random article"
     cz: "náhodný článek"
+
+permalink:
+    en: "permalink"
+    cz: "trvalý odkaz"

@@ -160,10 +160,14 @@ time
         width: 500px
         transform-style: preserve-3d
         margin-bottom: 60px
+        position: relative
 
         &.animate
             transform: translateZ(400px) translateY(300px) rotateX(-90deg)
             animation: fallPerspective .8s ease-in-out forwards    
+
+        .permalink
+            float: right
 
         h1, h2
             .icon
@@ -189,9 +193,23 @@ time
         .meta
             margin-top: 15px
 
-            &.icon
+            &.icon, .icon
                 &:before
                     margin-right: 6px
+
+        ul.tags
+            list-style-type: none
+            padding: 0
+            
+            li
+                display: inline-block            
+                
+                &:not(:last-child)
+                    margin-right: 4px
+
+                    &:after
+                        content: ","
+                        display: inline-block
 
         &.text
             blockquote
@@ -252,20 +270,6 @@ time
 
             .tag.group
                 display: none
-
-        ul.tags
-            list-style-type: none
-            padding: 0
-            
-            li
-                display: inline-block            
-                
-                &:not(:last-child)
-                    margin-right: 4px
-
-                    &:after
-                        content: ","
-                        display: inline-block
 
 @keyframes fallPerspective {
     100% { transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }

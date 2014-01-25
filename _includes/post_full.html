@@ -42,5 +42,8 @@
     {% endif %}
 
     <!-- date -->
-    <time datetime="{{ post.date }}" method="ago" class="meta icon clock-1"></time>
+    <div class="meta">
+        <a class="icon link permalink" href="{% include url.html which='post' %}">{{ site.data.i18n.permalink[locale] }}</a>
+        <time datetime="{{ post.date }}" method="ago" class="icon clock-1"></time>
+    </div>
 </article>
