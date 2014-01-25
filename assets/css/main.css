@@ -1,127 +1,62 @@
-pre{background:#f0f0f0;}
-pre .hll{background-color:#ffc}
-pre .c{color:#60a0b0;font-style:italic}
-pre .err{border:1px solid #f00}
-pre .k{color:#007020;font-weight:bold}
-pre .o{color:#666}
-pre .cm{color:#60a0b0;font-style:italic}
-pre .cp{color:#007020}
-pre .c1{color:#60a0b0;font-style:italic}
-pre .cs{color:#60a0b0;background-color:#fff0f0}
-pre .gd{color:#a00000}
-pre .ge{font-style:italic}
-pre .gr{color:#f00}
-pre .gh{color:#000080;font-weight:bold}
-pre .gi{color:#00a000}
-pre .go{color:#888}
-pre .gp{color:#c65d09;font-weight:bold}
-pre .gs{font-weight:bold}
-pre .gu{color:#800080;font-weight:bold}
-pre .gt{color:#04d}
-pre .kc{color:#007020;font-weight:bold}
-pre .kd{color:#007020;font-weight:bold}
-pre .kn{color:#007020;font-weight:bold}
-pre .kp{color:#007020}
-pre .kr{color:#007020;font-weight:bold}
-pre .kt{color:#902000}
-pre .m{color:#40a070}
-pre .s{color:#4070a0}
-pre .na{color:#4070a0}
-pre .nb{color:#007020}
-pre .nc{color:#0e84b5;font-weight:bold}
-pre .no{color:#60add5}
-pre .nd{color:#555;font-weight:bold}
-pre .ni{color:#d55537;font-weight:bold}
-pre .ne{color:#007020}
-pre .nf{color:#06287e}
-pre .nl{color:#002070;font-weight:bold}
-pre .nn{color:#0e84b5;font-weight:bold}
-pre .nt{color:#062873;font-weight:bold}
-pre .nv{color:#bb60d5}
-pre .ow{color:#007020;font-weight:bold}
-pre .w{color:#bbb}
-pre .mf{color:#40a070}
-pre .mh{color:#40a070}
-pre .mi{color:#40a070}
-pre .mo{color:#40a070}
-pre .sb{color:#4070a0}
-pre .sc{color:#4070a0}
-pre .sd{color:#4070a0;font-style:italic}
-pre .s2{color:#4070a0}
-pre .se{color:#4070a0;font-weight:bold}
-pre .sh{color:#4070a0}
-pre .si{color:#70a0d0;font-style:italic}
-pre .sx{color:#c65d09}
-pre .sr{color:#235388}
-pre .s1{color:#4070a0}
-pre .ss{color:#517918}
-pre .bp{color:#007020}
-pre .vc{color:#bb60d5}
-pre .vg{color:#bb60d5}
-pre .vi{color:#bb60d5}
-pre .il{color:#40a070}
-.highlight pre{background:#fff;}
-.highlight pre .hll{background-color:#ffc}
-.highlight pre .c{color:#888}
-.highlight pre .err{color:#f00;background-color:#faa}
-.highlight pre .k{color:#080;font-weight:bold}
-.highlight pre .o{color:#333}
-.highlight pre .cm{color:#888}
-.highlight pre .cp{color:#579}
-.highlight pre .c1{color:#888}
-.highlight pre .cs{color:#c00;font-weight:bold}
-.highlight pre .gd{color:#a00000}
-.highlight pre .ge{font-style:italic}
-.highlight pre .gr{color:#f00}
-.highlight pre .gh{color:#000080;font-weight:bold}
-.highlight pre .gi{color:#00a000}
-.highlight pre .go{color:#888}
-.highlight pre .gp{color:#c65d09;font-weight:bold}
-.highlight pre .gs{font-weight:bold}
-.highlight pre .gu{color:#800080;font-weight:bold}
-.highlight pre .gt{color:#04d}
-.highlight pre .kc{color:#080;font-weight:bold}
-.highlight pre .kd{color:#080;font-weight:bold}
-.highlight pre .kn{color:#080;font-weight:bold}
-.highlight pre .kp{color:#038;font-weight:bold}
-.highlight pre .kr{color:#080;font-weight:bold}
-.highlight pre .kt{color:#339;font-weight:bold}
-.highlight pre .m{color:#60e;font-weight:bold}
-.highlight pre .s{background-color:#fff0f0}
-.highlight pre .na{color:#00c}
-.highlight pre .nb{color:#007020}
-.highlight pre .nc{color:#b06;font-weight:bold}
-.highlight pre .no{color:#036;font-weight:bold}
-.highlight pre .nd{color:#555;font-weight:bold}
-.highlight pre .ni{color:#800;font-weight:bold}
-.highlight pre .ne{color:#f00;font-weight:bold}
-.highlight pre .nf{color:#06b;font-weight:bold}
-.highlight pre .nl{color:#970;font-weight:bold}
-.highlight pre .nn{color:#0e84b5;font-weight:bold}
-.highlight pre .nt{color:#070}
-.highlight pre .nv{color:#963}
-.highlight pre .ow{color:#000;font-weight:bold}
-.highlight pre .w{color:#bbb}
-.highlight pre .mf{color:#60e;font-weight:bold}
-.highlight pre .mh{color:#058;font-weight:bold}
-.highlight pre .mi{color:#00d;font-weight:bold}
-.highlight pre .mo{color:#40e;font-weight:bold}
-.highlight pre .sb{background-color:#fff0f0}
-.highlight pre .sc{color:#04d}
-.highlight pre .sd{color:#d42}
-.highlight pre .s2{background-color:#fff0f0}
-.highlight pre .se{color:#666;font-weight:bold;background-color:#fff0f0}
-.highlight pre .sh{background-color:#fff0f0}
-.highlight pre .si{background-color:#eee}
-.highlight pre .sx{color:#d20;background-color:#fff0f0}
-.highlight pre .sr{color:#000;background-color:#fff0ff}
-.highlight pre .s1{background-color:#fff0f0}
-.highlight pre .ss{color:#a60}
-.highlight pre .bp{color:#007020}
-.highlight pre .vc{color:#369}
-.highlight pre .vg{color:#d70;font-weight:bold}
-.highlight pre .vi{color:#33b}
-.highlight pre .il{color:#00d;font-weight:bold}
+.highlight .c{color:#998;font-style:italic}
+.highlight .err{color:#a61717;background-color:#e3d2d2}
+.highlight .k{font-weight:bold}
+.highlight .o{font-weight:bold}
+.highlight .cm{color:#998;font-style:italic}
+.highlight .cp{color:#999;font-weight:bold}
+.highlight .c1{color:#998;font-style:italic}
+.highlight .cs{color:#999;font-weight:bold;font-style:italic}
+.highlight .gd{color:#000;background-color:#fdd}
+.highlight .gd .x{color:#000;background-color:#faa}
+.highlight .ge{font-style:italic}
+.highlight .gr{color:#a00}
+.highlight .gh{color:#999}
+.highlight .gi{color:#000;background-color:#dfd}
+.highlight .gi .x{color:#000;background-color:#afa}
+.highlight .go{color:#888}
+.highlight .gp{color:#555}
+.highlight .gs{font-weight:bold}
+.highlight .gu{color:#aaa}
+.highlight .gt{color:#a00}
+.highlight .kc{font-weight:bold}
+.highlight .kd{font-weight:bold}
+.highlight .kp{font-weight:bold}
+.highlight .kr{font-weight:bold}
+.highlight .kt{color:#458;font-weight:bold}
+.highlight .m{color:#099}
+.highlight .s{color:#d14}
+.highlight .na{color:#008080}
+.highlight .nb{color:#0086b3}
+.highlight .nc{color:#458;font-weight:bold}
+.highlight .no{color:#008080}
+.highlight .ni{color:#800080}
+.highlight .ne{color:#900;font-weight:bold}
+.highlight .nf{color:#900;font-weight:bold}
+.highlight .nn{color:#555}
+.highlight .nt{color:#000080}
+.highlight .nv{color:#008080}
+.highlight .ow{font-weight:bold}
+.highlight .w{color:#bbb}
+.highlight .mf{color:#099}
+.highlight .mh{color:#099}
+.highlight .mi{color:#099}
+.highlight .mo{color:#099}
+.highlight .sb{color:#d14}
+.highlight .sc{color:#d14}
+.highlight .sd{color:#d14}
+.highlight .s2{color:#d14}
+.highlight .se{color:#d14}
+.highlight .sh{color:#d14}
+.highlight .si{color:#d14}
+.highlight .sx{color:#d14}
+.highlight .sr{color:#009926}
+.highlight .s1{color:#d14}
+.highlight .ss{color:#990073}
+.highlight .bp{color:#999}
+.highlight .vc{color:#008080}
+.highlight .vg{color:#008080}
+.highlight .vi{color:#008080}
+.highlight .il{color:#099}
 
 @font-face{font-family:'allerbold';src:url("../fonts/aller/aller_bd-webfont.eot");src:url("../fonts/aller/aller_bd-webfont.eot?#iefix") format('embedded-opentype'),url("../fonts/aller/aller_bd-webfont.woff") format('woff'),url("../fonts/aller/aller_bd-webfont.ttf") format('truetype');font-weight:normal;font-style:normal}
 @font-face{font-family:'aller_lightregular';src:url("../fonts/aller/aller_lt-webfont.eot");src:url("../fonts/aller/aller_lt-webfont.eot?#iefix") format('embedded-opentype'),url("../fonts/aller/aller_lt-webfont.woff") format('woff'),url("../fonts/aller/aller_lt-webfont.ttf") format('truetype');font-weight:normal;font-style:normal}
