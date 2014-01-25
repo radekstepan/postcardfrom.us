@@ -2,17 +2,25 @@
 
 <script>
 $(function() {    
-    var route, hash, url,
+    var route, hash, url, fail,
         regex  = /^#!(.*)$/,
         selector = $('.tag.group');
+
+    fail = function() {
+        $.event.trigger('oops');
+    };
 
     route = function() {
         if (match = (hash = window.location.hash).match(regex)) {
             if (!(selector.hide().filter('[tag="' + match[1] + '"]').show()).length) {
                 // No match...
+                fail();
+            } else {
+                $.event.trigger('success');
             }
         } else {
             // Malformed hash.
+            fail();
         }
     };
 

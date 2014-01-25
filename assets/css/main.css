@@ -75,6 +75,7 @@
 .icon.location-outline:before{content:'\e802'}
 .icon.down-small:before{content:'\e808'}
 .icon.tag-empty:before{content:'\e804'}
+.icon.emo-unhappy:before{content:'\e806'}
 
 body{background:#f4f8f3;color:#7b7b7b;font-family:"charis_silregular";font-size:13px}
 h1,h2,h3,h4,h5,.title{font-family:"aller_lightregular";font-weight:400;margin:0 0 15px 0}
@@ -90,6 +91,8 @@ p,ul,ol{line-height:22px}
 hr{border:0;border-bottom:1px dotted #ccc;margin:25px -70px}
 pre{margin:0}
 time{display:block;white-space:nowrap}
+#oops{background:#f4f8f3;position:absolute;text-align:center;z-index:2;top:0;height:100%;width:100%;}
+#oops h1{left:0;margin:auto;position:absolute;top:50%;width:100%}
 #header{padding:70px 0 40px 0;text-align:center;}
 #header:before{content:"";display:block;position:absolute;top:46px;left:50%;right:50%;background:url("../img/favicon.png") no-repeat 0 0;width:16px;height:16px;margin-left:-16px}
 #header .title{font-size:18px;font-weight:bold;color:#1b676b;padding:10px;text-shadow:1px 1px 0 #fff}

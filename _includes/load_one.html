@@ -1,20 +1,26 @@
 <script>
 $(function() {    
-    var route, hash, url,
+    var route, hash, url, fail,
         regex  = /^#!\/(\d{4}\/\d{1,2}\/\d{1,2}\/.*)$/,
         root   = '{{ site.baseurl }}',
         target = $('#content'),
         locale = '{{ page.locale }}';
 
+    fail = function() {
+        $.event.trigger('oops');
+    };
+
     route = function() {
         if (match = (hash = window.location.hash).match(regex)) {
             url = [ root, locale, match[1] ].join('/');
             $.get(url, function(html) {
+                $.event.trigger('success');
                 target.html(html);
                 $.event.trigger('moment');
-            });
+            }).fail(fail);
         } else {
             // No match...
+            fail();
         }
     };
 

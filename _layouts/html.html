@@ -11,7 +11,7 @@
     <script src="{{ site.baseurl }}/assets/js/vendor.js" type="text/javascript"></script>
     <script>
     (function() {
-        // Listen for events.
+        // Moment.js utils.
         $(window).bind('moment', function() {
             $('time[method]').each(function() {
                 var el = $(this),
@@ -27,6 +27,12 @@
                         break;
                 }
             });
+        // Trouble...
+        }).bind('oops', function() {
+            $('#oops').show();
+        // All good.
+        }).bind('success', function() {
+            $('#oops').hide();
         });
 
         $(function() {
@@ -40,5 +46,9 @@
 </head>
 <body>
     {{ content }}
+
+    <div id="oops" style="{% unless page.oops %}display:none{% endunless %}">
+        <h1><span class="icon emo-unhappy"></span> Oops &hellip;</h1>
+    </div>
 </body>
 </html>
