@@ -3,16 +3,12 @@ scroll:
     cz: "Projeď pro další článek"
 
 archive:
-    en: "Archive"
-    cz: "Archiv"
-
-tags:
-    en: "Tags"
-    cz: "Štítky"
+    en: "archive"
+    cz: "archiv"
 
 schedule:
     en: "schedule"
-    cz: "program"
+    cz: "itinerář"
 
 contact:
     en: "contact"

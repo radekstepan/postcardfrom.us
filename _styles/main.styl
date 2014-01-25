@@ -226,19 +226,23 @@ time
                     display: inline-block
 
         &.list
-            .article
+            > h1
+                text-transform: capitalize
+            
+            article
                 &:not(:last-child)
-                    margin-bottom: 30px
+                    margin-bottom: 20px
 
-                h2, time
-                    display: inline-block
-                    line-height: 20px
-
-                h2
-                    font-size: 17px
-                    margin: 0
+                &.short
+                    h1
+                        line-height: 20px
+                        font-size: 17px
+                        margin: 0
+                        display: inline-block
 
                 time
+                    display: inline-block
+                    line-height: 20px
                     vertical-align: top
                     width: 70px
                     text-transform: uppercase

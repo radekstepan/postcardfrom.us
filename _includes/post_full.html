@@ -1,6 +1,6 @@
 {% assign locale = post.category %}
 
-<div class="wrapper {{ post.type }}">
+<article class="wrapper {{ post.type }}">
     <!-- photos -->
     {% if post.photos %}
         {% for photo in post.photos %}
@@ -16,10 +16,10 @@
     {% case post.type %}
         <!-- link posts -->
         {% when 'link' %}
-            <h2 class="title"><a target="_{{ post.title | cgi_escape | downcase }}" href="{{ post.href }}">{{ post.title }} <span class="icon right-small"></span></a></h2>
+            <h1 class="title"><a target="_{{ post.title | cgi_escape | downcase }}" href="{{ post.href }}">{{ post.title }} <span class="icon right-small"></span></a></h1>
         <!-- other -->
         {% else %}
-            <h2 class="title"><a href="{% include url.html which='post' %}">{{ post.title }}</a></h2>
+            <h1 class="title"><a href="{% include url.html which='post' %}">{{ post.title }}</a></h1>
     {% endcase %}
     
     <!-- the content -->
@@ -43,4 +43,4 @@
 
     <!-- date -->
     <time datetime="{{ post.date }}" method="ago" title="{{ post.date }}" class="meta icon clock-1"></time>
-</div>
+</article>

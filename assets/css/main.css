@@ -126,11 +126,11 @@ time{display:block;white-space:nowrap}
 #content .wrapper.quote blockquote{margin:0;font-weight:normal;font-size:28px;letter-spacing:-1px;}
 #content .wrapper.quote blockquote p{margin:0;line-height:34px}
 #content .wrapper.link h1 .icon,#content .wrapper.link h2 .icon{display:inline-block}
-#content .wrapper.list .article:not(:last-child){margin-bottom:30px}
-#content .wrapper.list .article h2,#content .wrapper.list .article time{display:inline-block;line-height:20px}
-#content .wrapper.list .article h2{font-size:17px;margin:0}
-#content .wrapper.list .article time{vertical-align:top;width:70px;text-transform:uppercase}
-#content .wrapper.list .article ul.tags{margin:4px 0 0 74px}
+#content .wrapper.list > h1{text-transform:capitalize}
+#content .wrapper.list article:not(:last-child){margin-bottom:20px}
+#content .wrapper.list article.short h1{line-height:20px;font-size:17px;margin:0;display:inline-block}
+#content .wrapper.list article time{display:inline-block;line-height:20px;vertical-align:top;width:70px;text-transform:uppercase}
+#content .wrapper.list article ul.tags{margin:4px 0 0 74px}
 #content .wrapper.list .tag.group{display:none}
 #content .wrapper ul.tags{list-style-type:none;padding:0;}
 #content .wrapper ul.tags li{display:inline-block;}

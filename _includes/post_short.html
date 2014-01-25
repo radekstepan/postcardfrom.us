@@ -1,9 +1,9 @@
-<div class="article">
+<article class="short">
     <!-- date -->
     <time datetime="{{ post.date }}" method="format" title="{{ post.date }}"></time>
     
     <!-- title -->
-    <h2><a href="{% include url.html which='post' %}">{{ post.title }}</a></h2>
+    <h1><a href="{% include url.html which='post' %}">{{ post.title }}</a></h1>
     
     <!-- tags -->
     {% if post.tags.first %}
@@ -13,4 +13,4 @@
     {% endfor %}
     </ul>
     {% endif %}
-</div>
+</article>

@@ -1,6 +1,7 @@
 ---
 layout: page
 locale: en
+title:  Schedule
 ---
 
 #Schedule

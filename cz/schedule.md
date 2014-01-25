@@ -1,8 +1,9 @@
 ---
 layout: page
 locale: cz
+title:  Itinerář
 ---
 
-#Program
+#Itinerář
 
 Náš cestovatelský program.
