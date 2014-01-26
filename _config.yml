@@ -11,7 +11,7 @@ url:         http://radekstepan.com/voyage-pacifique
 # Site prefix for assets when running on GitHub Pages.
 baseurl:     /voyage-pacifique
 # Ignore Node.js stuff.
-exclude:     [ node_modules, vendor, Gruntfile.coffee, bower.json, package.json ]
+exclude:     [ node_modules, vendor, Gruntfile.coffee, bower.json, package.json, README.md, example.jpg ]
 
 encoding:    UTF-8
 markdown:    redcarpet

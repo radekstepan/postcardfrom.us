@@ -5,7 +5,6 @@ layout: nil
 
 User-agent: *
 Sitemap:  {{ site.url }}/sitemap.xml
-Disallow: /
 Disallow: /cz/random
 Disallow: /en/random 
 Disallow: /cz/post

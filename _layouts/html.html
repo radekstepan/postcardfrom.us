@@ -8,10 +8,15 @@
     <meta name="description" content="{{ site.description }}">
     
     <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/vendor.css" type="text/css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" type="text/css">
 
-    <script src="{{ site.baseurl }}/assets/js/vendor.js" type="text/javascript"></script>
+    {% unless (site.baseurl | size) == 0 %}
+    {% assign suffix = '.min' %}
+    {% endunless %}
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/vendor{{ suffix }}.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main{{ suffix }}.css" type="text/css">
+    <script src="{{ site.baseurl }}/assets/js/vendor{{ suffix }}.js" type="text/javascript"></script>
+
     <script>
     (function() {
         // Moment.js utils.

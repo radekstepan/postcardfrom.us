@@ -31,10 +31,28 @@ module.exports = (grunt) ->
                 ]
                 dest: 'assets/css/vendor.css'
 
+        uglify:
+            scripts:
+                files:
+                    'assets/js/vendor.min.js': 'assets/js/vendor.js'
+
+        cssmin:
+            combine:
+                files:
+                    'assets/css/vendor.min.css': 'assets/css/vendor.css'
+                    'assets/css/main.min.css': 'assets/css/main.css'
+
     grunt.loadNpmTasks('grunt-contrib-stylus')
     grunt.loadNpmTasks('grunt-contrib-concat')
+    grunt.loadNpmTasks('grunt-contrib-uglify')
+    grunt.loadNpmTasks('grunt-contrib-cssmin')
 
     grunt.registerTask('default', [
         'stylus'
         'concat'
+    ])
+
+    grunt.registerTask('minify', [
+        'uglify'
+        'cssmin'
     ])
