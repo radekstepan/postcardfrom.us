@@ -1,4 +1,4 @@
-#Postcard from us [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+#Postcard From Us [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 Travel log in [Jekyll](http://jekyllrb.com/).
 
