@@ -1,6 +1,6 @@
 <article class="short">
     <!-- date -->
-    <time datetime="{{ post.date }}" method="format"></time>
+    <time datetime="{{ post.date | date_to_xmlschema }}" method="format"></time>
     
     <!-- title -->
     <h1><a href="{{ post.url | prepend: site.baseurl }}" linkify>{{ post.title }}</a></h1>

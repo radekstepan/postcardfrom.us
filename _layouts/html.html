@@ -24,6 +24,7 @@
             $('time[method]').each(function() {
                 var el = $(this),
                     datetime = moment(el.attr('datetime'));
+                
                 switch(el.attr('method')) {
                     // Short date format.
                     case 'format':
