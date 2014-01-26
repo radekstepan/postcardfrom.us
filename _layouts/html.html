@@ -64,8 +64,6 @@
 <body>
     {{ content }}
 
-    <div id="oops" style="{% unless page.oops %}display:none{% endunless %}">
-        <h1><span class="icon emo-unhappy"></span> Oops &hellip;</h1>
-    </div>
+    {% include oops.html %}
 </body>
 </html>
