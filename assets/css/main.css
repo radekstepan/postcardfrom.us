@@ -79,8 +79,8 @@
 .icon.down-small:before{content:'\e808'}
 .icon.link:before{content:'\e809'}
 
-body{background:#f4f8f3;color:#7b7b7b;font-family:"charis_silregular";font-size:13px}
-h1,h2,h3,h4,h5,.title{font-family:"aller_lightregular";font-weight:400;margin:0 0 15px 0}
+body{background:#f4f8f3;color:#7b7b7b;font-family:"charis_silregular",serif;font-size:13px}
+h1,h2,h3,h4,h5,.title{font-family:"aller_lightregular",sans-serif;font-weight:400;margin:0 0 15px 0}
 h1{font-size:30px;line-height:45px}
 h2{font-size:24px;line-height:36px}
 h3{font-size:18px;line-height:27px}
@@ -114,7 +114,7 @@ time{display:block;white-space:nowrap}
 #content .wrapper.animate{-webkit-transform:translateZ(400px) translateY(300px) rotateX(-90deg);-moz-transform:translateZ(400px) translateY(300px) rotateX(-90deg);-o-transform:translateZ(400px) translateY(300px) rotateX(-90deg);-ms-transform:translateZ(400px) translateY(300px) rotateX(-90deg);transform:translateZ(400px) translateY(300px) rotateX(-90deg);-webkit-animation:fallPerspective .8s ease-in-out forwards;-moz-animation:fallPerspective .8s ease-in-out forwards;-o-animation:fallPerspective .8s ease-in-out forwards;-ms-animation:fallPerspective .8s ease-in-out forwards;animation:fallPerspective .8s ease-in-out forwards}
 #content .wrapper .permalink{float:right}
 #content .wrapper h1 .icon,#content .wrapper h2 .icon{font-size:20px;display:none}
-#content .wrapper .photo{margin-bottom:20px;}
+#content .wrapper .video,#content .wrapper .photo{margin-bottom:20px}
 #content .wrapper .photo img{max-width:100%;height:auto}
 #content .wrapper .content{margin:20px 0;}
 #content .wrapper .content p,#content .wrapper .content blockquote,#content .wrapper .content li{text-align:justify}
@@ -133,7 +133,7 @@ time{display:block;white-space:nowrap}
 #content .wrapper.quote blockquote p{margin:0;line-height:34px}
 #content .wrapper.link h1 .icon,#content .wrapper.link h2 .icon{display:inline-block}
 #content .wrapper.list > h1{text-transform:capitalize}
-#content .wrapper.list article:not(:last-child){margin-bottom:20px}
+#content .wrapper.list article:not(.group):not(:last-child){margin-bottom:20px}
 #content .wrapper.list article.short h1{line-height:20px;font-size:17px;margin:0;display:inline-block}
 #content .wrapper.list article time{display:inline-block;line-height:20px;vertical-align:top;width:70px;text-transform:uppercase}
 #content .wrapper.list article ul.tags{margin:4px 0 0 74px}

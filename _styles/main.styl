@@ -4,8 +4,8 @@ $width = 500px
 
 $main_color = #1B676B
 
-$title_font = "aller_lightregular"
-$text_font  = "charis_silregular"
+$title_font = "aller_lightregular", sans-serif
+$text_font  = "charis_silregular", serif
 
 body
     background: #f4f8f3
@@ -173,10 +173,11 @@ time
             .icon
                 font-size: 20px
                 display: none
-
-        .photo
+        
+        .video, .photo
             margin-bottom: 20px
 
+        .photo
             img
                 max-width: 100%
                 height: auto
@@ -248,7 +249,7 @@ time
                 text-transform: capitalize
             
             article
-                &:not(:last-child)
+                &:not(.group):not(:last-child)
                     margin-bottom: 20px
 
                 &.short

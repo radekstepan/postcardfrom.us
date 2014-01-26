@@ -1,6 +1,11 @@
 {% assign locale = post.category %}
 
 <article class="wrapper {{ post.type }}">
+    <!-- video -->
+    {% if post.video %}
+    <iframe class="video" src="//player.vimeo.com/video/{{ post.video.id }}?color={{ post.video.color }}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    {% endif %}
+
     <!-- photos -->
     {% if post.photos %}
         {% for photo in post.photos %}
