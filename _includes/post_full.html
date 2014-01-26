@@ -52,3 +52,7 @@
         <time datetime="{{ post.date }}" method="ago" class="icon clock-1"></time>
     </div>
 </article>
+
+<script>
+if (typeof $ != 'undefined') $.event.trigger('title', [ '{{ post.title }}' ]);
+</script>
