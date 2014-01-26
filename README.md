@@ -11,7 +11,7 @@ Travel log in [Jekyll](http://jekyllrb.com/).
 1. Support for `sitemap.xml` and `robots.txt`. SEO is somewhat achieved.
 1. Per language **RSS** feed.
 1. Text, images, quotes, links and [Vimeo](vimeo.com) videos can be embedded.
-1. *and* all with vanilla Jekyll build that can be built by [GitHub Pages](http://pages.github.com/).
+1. *and* all with vanilla Jekyll that can be built by [GitHub Pages](http://pages.github.com/).
 
 ![image](https://raw.github.com/radekstepan/postcardfrom.us/gh-pages/example.jpg)
 

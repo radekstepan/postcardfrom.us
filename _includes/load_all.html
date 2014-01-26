@@ -25,15 +25,14 @@ $(function() {
         {% endfor %}],
         // Are we ready?
         ready = true,
-        // Append all here.
-        target = $('#content')
+        // The more note and target for appending.
+        note = $('#content .more'),
         // Uh, window & document.
         w = $(window),
         d = $(document),
         // Scroll handler.
         onScroll = null,
-        url = null
-        note = target.find('.more');
+        url = null;
 
     // On scroll.
     w.on('scroll', onScroll = function() {
@@ -52,12 +51,13 @@ $(function() {
                 // Done.
                 ready = true;
                 w.bind('scroll', onScroll);
-                
-                note[ (more.length) ? 'show' : 'remove' ]();
 
                 // Append to DOM.
-                target.append($(html).addClass('animate'));
+                $(html).addClass('animate').insertBefore(note);
                 $.event.trigger('moment');
+                
+                // No more?
+                note[ (more.length) ? 'show' : 'remove' ]();
             });
         }
     });
