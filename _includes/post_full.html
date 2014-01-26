@@ -33,7 +33,7 @@ if (typeof $ != 'undefined') {
             <h1 class="title"><a target="_{{ post.title | cgi_escape | downcase }}" href="{{ post.href }}">{{ post.title }} <span class="icon right-small"></span></a></h1>
         <!-- other -->
         {% else %}
-            <h1 class="title"><a href="{% include url.html which='post' %}">{{ post.title }}</a></h1>
+            <h1 class="title"><a href="{{ post.url | before: site.baseurl }}" linkify>{{ post.title }}</a></h1>
     {% endcase %}
     
     <!-- the content -->
@@ -57,7 +57,7 @@ if (typeof $ != 'undefined') {
 
     <!-- date -->
     <div class="meta">
-        <a class="icon link permalink" href="{% include url.html which='post' %}">{{ site.data.i18n.permalink[locale] }}</a>
+        <a class="icon link permalink" href="{{ post.url | before: site.baseurl }}" linkify>{{ site.data.i18n.permalink[locale] }}</a>
         <time datetime="{{ post.date }}" method="ago" class="icon clock-1"></time>
     </div>
 </article>

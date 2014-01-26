@@ -1,7 +1,7 @@
 {% assign locale = page.locale %}
 
 <article class="wrapper list">
-    <h1>{{ site.data.i18n.archive[locale] }}</h1>
+    <h1>{{ page.title }}</h1>
 
     {% for post in site.categories[locale] %}
         {% include post_short.html %}

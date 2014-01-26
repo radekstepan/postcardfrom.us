@@ -1,7 +1,19 @@
+{% assign locale = page.locale %}
+{% assign i18n = site.data.i18n %}
+
 <div id="oops" style="{% unless page.oops or include.visible %}display:none{% endunless %}">
     <div class="message">
-        <h1><span class="icon emo-unhappy"></span> Oops &hellip;</h1>
-        <p>Maybe you can find what you were looking for in the <a href="{{ site.baseurl }}/en/archive/">posts archive</a>.</p>
-        <p>Možná naleznete co hledáte v <a href="{{ site.baseurl }}/cz/archive/">přehledu článků</a>.</p>
+        {% case locale %}
+        {% when 'en' %}
+            <div class="title"><span class="icon emo-unhappy"></span> {{ i18n.oops.en }} &hellip;</div>
+            <p>Maybe you can find what you were looking for in the <a href="{{ site.baseurl }}/en/archive/">posts archive</a>.</p>
+        {% when 'cz' %}
+            <div class="title"><span class="icon emo-unhappy"></span> {{ i18n.oops.cz }} &hellip;</div>
+            <p>Možná naleznete co hledáte v <a href="{{ site.baseurl }}/cz/archive/">přehledu článků</a>.</p>
+        {% else %}
+            <div class="title"><span class="icon emo-unhappy"></div>
+            <p>Maybe you can find what you were looking for in the <a href="{{ site.baseurl }}/en/archive/">posts archive</a>.</p>
+            <p>Možná naleznete co hledáte v <a href="{{ site.baseurl }}/cz/archive/">přehledu článků</a>.</p>
+        {% endcase %}
     </div>
 </div>

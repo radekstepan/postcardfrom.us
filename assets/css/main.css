@@ -95,8 +95,9 @@ pre{margin:0}
 time{display:block;white-space:nowrap}
 #oops{background:#f3f1eb;position:absolute;text-align:center;z-index:2;top:0;height:100%;width:100%;}
 #oops .message{position:absolute;top:30%;width:100%;color:#4a4a4a;}
+#oops .message .title{font-size:30px;line-height:45px}
 #oops .message p{font-size:16px}
-#oops .message a{background:#e16f46;color:#fff;padding:0 6px}
+#oops .message a{color:#e16f46;font-weight:bold}
 #header{padding:70px 0 40px 0;text-align:center;}
 #header:before{content:"";display:block;position:absolute;top:46px;left:50%;right:50%;background:url("../img/favicon.png") no-repeat 0 0;width:16px;height:16px;margin-left:-16px}
 #header .title{font-size:18px;font-weight:bold;color:#1b676b;padding:10px;text-shadow:1px 1px 0 #fff}
@@ -134,7 +135,6 @@ time{display:block;white-space:nowrap}
 #content .wrapper.quote blockquote{margin:0;font-weight:normal;font-size:28px;letter-spacing:-1px;}
 #content .wrapper.quote blockquote p{margin:0;line-height:34px}
 #content .wrapper.link h1 .icon,#content .wrapper.link h2 .icon{display:inline-block}
-#content .wrapper.list > h1{text-transform:capitalize}
 #content .wrapper.list article:not(.group):not(:last-child){margin-bottom:20px}
 #content .wrapper.list article.short h1{line-height:20px;font-size:17px;margin:0;display:inline-block}
 #content .wrapper.list article time{display:inline-block;line-height:20px;vertical-align:top;width:70px;text-transform:uppercase}

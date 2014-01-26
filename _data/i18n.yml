@@ -25,3 +25,7 @@ random:
 permalink:
     en: "permalink"
     cz: "trvalý odkaz"
+
+oops:
+    en: "Oops"
+    cz: "Chybička se vloudila"

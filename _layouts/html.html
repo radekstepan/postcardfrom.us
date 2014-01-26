@@ -52,6 +52,21 @@
         {% endunless %}
         });
 
+        // Rewrite post URLs.
+        $(document).on('click', 'a[linkify]', function(evt) {
+            var a;
+            (a = $(evt.target)).prop('href', a
+                .prop('href')
+                .replace(/({{ page.locale }})/, '$1/post/#!')
+            ).removeAttr('linkify');
+
+            // Do we need to redirect?
+            if (a.prop('href') == window.location.href) {
+                evt.preventDefault();
+                return false;
+            }
+        });
+
         $(function() {
             // Set locale.
             moment.lang('{{ page.locale }}');
