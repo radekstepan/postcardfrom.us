@@ -1,6 +1,6 @@
 {
-    "name": "voyage-pacifique",
-    "version": "0.0.0",
+    "name": "postcardfrom.us",
+    "version": "0.1.0",
     "devDependencies": {
         "bower": "~1.2.7",
         "grunt": "~0.4.1",

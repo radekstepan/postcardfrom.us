@@ -1,5 +1,5 @@
 # Name of the site.
-name:        Voyage dans le Pacifique
+name:        Postcard from us
 # Description of the site.
 description: Travel log of Barbora and Radek
 # Center on UK.
@@ -7,11 +7,13 @@ timezone:    Europe/London
 # Publish articles with a future date.
 future:      true
 # Site url.
-url:         http://radekstepan.com/voyage-pacifique
-# Site prefix for assets when running on GitHub Pages.
-baseurl:     /voyage-pacifique
+url:         http://postcardfrom.us
+# Site prefix for assets when running on GitHub Pages; not custom domain.
+baseurl:     ''
+# Contact email.
+email:       mail@postcardfrom.us
 # Ignore Node.js stuff.
-exclude:     [ node_modules, vendor, Gruntfile.coffee, bower.json, package.json, README.md, example.jpg ]
+exclude:     [ node_modules, vendor, Gruntfile.coffee, bower.json, package.json, README.md, example.jpg, CNAME ]
 
 encoding:    UTF-8
 markdown:    redcarpet

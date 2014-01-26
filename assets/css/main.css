@@ -98,8 +98,8 @@ time{display:block;white-space:nowrap}
 #oops .message .title{font-size:30px;line-height:45px}
 #oops .message p{font-size:16px}
 #oops .message a{color:#e16f46;font-weight:bold}
-#header{padding:70px 0 40px 0;text-align:center;}
-#header:before{content:"";display:block;position:absolute;top:46px;left:50%;right:50%;background:url("../img/favicon.png") no-repeat 0 0;width:16px;height:16px;margin-left:-16px}
+#header{padding:40px 0;text-align:center;}
+#header .logo{display:block;margin:0 auto;margin-bottom:10px}
 #header .title{font-size:18px;font-weight:bold;color:#1b676b;padding:10px;text-shadow:1px 1px 0 #fff}
 #header ul{margin-top:20px;}
 #header ul li{margin:0 10px;}

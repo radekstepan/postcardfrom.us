@@ -1,4 +1,4 @@
-#Voyage dans le Pacifique [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+#Postcard from us [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 Travel log in [Jekyll](http://jekyllrb.com/).
 
@@ -13,7 +13,7 @@ Travel log in [Jekyll](http://jekyllrb.com/).
 1. Text, images, quotes, links and [Vimeo](vimeo.com) videos can be embedded.
 1. *and* all with vanilla Jekyll build that can be built by [GitHub Pages](http://pages.github.com/).
 
-![image](https://raw.github.com/radekstepan/voyage-pacifique/gh-pages/example.jpg)
+![image](https://raw.github.com/radekstepan/postcardfrom.us/gh-pages/example.jpg)
 
 ##Quickstart
 
