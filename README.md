@@ -88,6 +88,8 @@ You can specify the language of a post by setting the `category` to either `en` 
 category: cz
 ```
 
+You can customize the internationalization file in `_data/i18n.yml`.
+
 ####Photos
 
 One or more photos can be embedded in the header of the post as follows:
