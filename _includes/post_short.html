@@ -3,7 +3,7 @@
     <time datetime="{{ post.date }}" method="format"></time>
     
     <!-- title -->
-    <h1><a href="{{ post.url | before: site.baseurl }}" linkify>{{ post.title }}</a></h1>
+    <h1><a href="{{ post.url | prepend: site.baseurl }}" linkify>{{ post.title }}</a></h1>
     
     <!-- tags -->
     {% if post.tags.first %}
