@@ -1,0 +1,12 @@
+---
+layout: nil
+---
+# robots.txt for {{ site.url }}
+
+User-agent: *
+Sitemap:  {{ site.url }}/sitemap.xml
+Disallow: /
+Disallow: /cz/random
+Disallow: /en/random 
+Disallow: /cz/post
+Disallow: /en/post

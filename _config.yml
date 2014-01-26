@@ -12,8 +12,6 @@ url:         http://radekstepan.com/voyage-pacifique
 baseurl:     /voyage-pacifique
 # Ignore Node.js stuff.
 exclude:     [ node_modules, vendor, Gruntfile.coffee, bower.json, package.json ]
-# How many posts do we show per index page?
-paginate:    3
 
 encoding:    UTF-8
 markdown:    redcarpet

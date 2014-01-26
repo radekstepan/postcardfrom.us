@@ -1,6 +1,1 @@
-{% case include.which %}
-{% when 'post' %}
-{{ site.baseurl | append: '/' | replace: '//', '/' }}{{ post.category }}/post/#!{{ post.url | remove_first: post.category | replace: '//', '/' }}
-{% when 'tag' %}
-{{ site.baseurl }}/{{ locale }}/tag/#!{{ tag | cgi_escape | downcase }}
-{% endcase %}
+{% case include.which %}{% when 'post' %}{{ site.baseurl | append: '/' | replace: '//', '/' }}{{ post.category }}/post/#!{{ post.url | remove_first: post.category | replace: '//', '/' }}{% when 'tag' %}{{ site.baseurl }}/{{ locale }}/tag/#!{{ tag | cgi_escape | downcase }}{% endcase %}
