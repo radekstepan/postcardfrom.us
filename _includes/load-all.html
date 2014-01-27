@@ -4,7 +4,7 @@
 <!-- show at most n posts straight away -->
 {% for post in site.categories[page.locale] limit:batch %}
     {% assign content = post.content %}
-    {% include post_full.html %}
+    {% include post-full.html %}
 {% endfor %}
 
 {% if site.categories[page.locale].size > batch %}
@@ -54,7 +54,7 @@ $(function() {
 
                 // Append to DOM.
                 $(html).addClass('animate').insertBefore(note);
-                $.event.trigger('moment');
+                $.event.trigger('process');
                 
                 // No more?
                 note[ (more.length) ? 'show' : 'remove' ]();

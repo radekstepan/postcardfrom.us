@@ -2,7 +2,7 @@
 
 <script>
 $(function() {    
-    var route, hash, url, fail,
+    var route, fail,
         regex  = /^#!(.*)$/,
         selector = $('.tag.group');
 
@@ -11,12 +11,13 @@ $(function() {
     };
 
     route = function() {
-        if (match = (hash = window.location.hash).match(regex)) {
-            if (!(selector.hide().filter('[tag="' + match[1] + '"]').show()).length) {
+        if (match = window.location.hash.match(regex)) {
+            // Hide all and show any matches.
+            if ((selector.hide().filter('[tag="' + match[1] + '"]').show()).length) {
+                $.event.trigger('success');
+            } else {
                 // No match...
                 fail();
-            } else {
-                $.event.trigger('success');
             }
         } else {
             // Malformed hash.
@@ -24,6 +25,13 @@ $(function() {
         }
     };
 
+    // Slugify all the tags on the page.
+    $('[tag]').each(function() {
+        var el = $(this);
+        el.attr('tag', $.slugify(el.attr('tag')));
+    });
+
+    // Start routing.
     if ('onhashchange' in window && 'hash' in window.location) {
         window.addEventListener('hashchange', route, false);
         route.call(null);
@@ -33,7 +41,6 @@ $(function() {
 
 <article class="wrapper list">
 {% for tag in site.tags %}
-    {% assign name = tag | first | cgi_escape | downcase %}
     {% assign show = true %}
         
     {% for posts in tag %}
@@ -43,11 +50,11 @@ $(function() {
                 {% if show %}
                     {% assign show = false %}
                     {% assign close = true %}
-            <article class="tag group" tag="{{ name }}">
+            <article class="tag group" tag="{{ tag | first | xml_escape | downcase }}">
                 <h1>{{ tag | first }}</h1>
                 {% endif %}
                 
-                {% include post_short.html %}
+                {% include post-short.html %}
             {% endif %}
         {% endfor %}
 

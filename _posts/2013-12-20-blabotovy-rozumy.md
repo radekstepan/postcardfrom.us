@@ -2,6 +2,7 @@
 layout:   post
 type:     text
 title:    "Blábotovy rozumy"
+tags:     [ "\"'hard ONE#+'\"" ]
 category: cz
 ---
 

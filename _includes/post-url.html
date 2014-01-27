@@ -1,0 +1,1 @@
+{% case include.which %}{% when 'post' %}{{ site.baseurl }}/{{ locale }}/post/#!{{ post.url | remove_first: locale | replace: '//', '/' }}{% when 'tag' %}{{ site.baseurl }}/{{ locale }}/tag/{% endcase %}

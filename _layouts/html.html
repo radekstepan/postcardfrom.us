@@ -19,8 +19,8 @@
 
     <script>
     (function() {
-        // Moment.js utils.
-        $(window).bind('moment', function() {
+        $(window).bind('process', function() {
+            // Moment.js utils.
             $('time[method]').each(function() {
                 var el = $(this),
                     datetime = moment(el.attr('datetime'));
@@ -41,6 +41,18 @@
                         .removeAttr('method');
                         break;
                 }
+            });
+
+            // Slugify hash parts of urls.
+            $('a[slugify]').each(function() {
+                var el = $(this);
+
+                el
+                .prop('href', [
+                    el.prop('href'),
+                    $.slugify(el.attr('slugify'))
+                ].join('#!'))
+                .removeAttr('slugify');
             });
         
         // Trouble...
@@ -77,7 +89,7 @@
             // Set locale.
             moment.lang('{{ page.locale }}');
             // On document ready, process the page.
-            $.event.trigger('moment');
+            $.event.trigger('process');
         });
     })();
     </script>

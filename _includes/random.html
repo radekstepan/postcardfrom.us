@@ -19,7 +19,7 @@ $(function() {
         $.get(url, function(html) {
             $.event.trigger('success');
             $('#content').html(html);
-            $.event.trigger('moment');
+            $.event.trigger('process');
         }).fail(fail);
     };
 

@@ -16,6 +16,7 @@ module.exports = (grunt) ->
             scripts:
                 src: [
                     'vendor/jquery/jquery.js'
+                    'vendor/jquery-slugify/dist/slugify.js'
                     'vendor/store.js/store.js'
                     'vendor/moment/moment.js'
                     'vendor/moment/lang/cs.js'

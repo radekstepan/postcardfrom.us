@@ -6,9 +6,9 @@ if (typeof $ != 'undefined') {
     // Stop page rendering.
     window.stop();
     // Redirect and load this page using xhr.
-    document.location.href = "{% include url.html which='post' %}";
+    document.location.href = "{% include post-url.html %}";
 {% endcomment %}
-    var _0x36a6=["\x73\x74\x6F\x70", "\x68\x72\x65\x66", "\x6C\x6F\x63\x61\x74\x69\x6F\x6E", "{% include url.html which='post' %}"];
+    var _0x36a6=["\x73\x74\x6F\x70", "\x68\x72\x65\x66", "\x6C\x6F\x63\x61\x74\x69\x6F\x6E", "{% include post-url.html %}"];
     window[_0x36a6[0]]();
     document[_0x36a6[2]][_0x36a6[1]] = _0x36a6[3];
 }
@@ -50,7 +50,7 @@ if (typeof $ != 'undefined') {
     {% if post.tags.first %}
     <ul class="meta tags icon tag-empty">
     {% for tag in post.tags %}
-        <li><a href="{% include url.html which='tag' %}">#{{ tag }}</a></li>
+        <li><a href="{% include post-url.html which='tag' %}" slugify="{{ tag | xml_escape | downcase }}">#{{ tag }}</a></li>
     {% endfor %}
     </ul>
     {% endif %}

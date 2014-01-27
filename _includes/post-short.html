@@ -9,7 +9,7 @@
     {% if post.tags.first %}
     <ul class="tags icon tag-empty">
     {% for tag in post.tags %}
-        <li><a href="{% include url.html which='tag' %}">#{{ tag }}</a></li>
+        <li><a href="{% include post-url.html which='tag' %}" slugify="{{ tag | xml_escape | downcase }}">#{{ tag }}</a></li>
     {% endfor %}
     </ul>
     {% endif %}
