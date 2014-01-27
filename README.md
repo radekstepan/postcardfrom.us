@@ -37,7 +37,7 @@ $ gem install jekyll
 Watch & serve for local development:
 
 ```bash
-$ jekyll serve --watch --drafts --baseurl=
+$ jekyll serve --watch --drafts --baseurl='/blog'
 ```
 
 Build:
@@ -72,7 +72,7 @@ To make a minified build:
 $ grunt minify
 ```
 
-Minified resources will be required on a page when `baseurl` parameter to Jekyll is not empty.
+Minified resources will be required on a page when `baseurl` parameter to Jekyll is empty (running on the root of our domain). Locally we run with a base url of say `/blog` to get the latest unminified grunt builds. 
 
 ##Customization
 

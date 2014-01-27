@@ -9,9 +9,13 @@
     
     <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon.ico" type="image/x-icon">
 
-    {% unless (site.baseurl | size) == 0 %}
+    {% comment %}
+    <!-- It is assumed you are running without a `baseurl` in production. If this is not
+    correct, then update the following code to your needs. -->
+    {% endcomment %}
+    {% if (site.baseurl | size) == 0 %}
     {% assign suffix = '.min' %}
-    {% endunless %}
+    {% endif %}
 
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/vendor{{ suffix }}.css" type="text/css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main{{ suffix }}.css" type="text/css">
