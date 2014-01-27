@@ -9,3 +9,5 @@ Disallow: /cz/random
 Disallow: /en/random 
 Disallow: /cz/post
 Disallow: /en/post
+Disallow: /cz/tag
+Disallow: /en/tag
