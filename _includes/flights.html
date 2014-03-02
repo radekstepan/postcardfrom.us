@@ -1,0 +1,38 @@
+{% assign i18n = site.data.i18n %}
+{% assign locale = page.locale %}
+
+<table id="flights">
+{% for flight in site.data.flights %}
+    <tr>
+        <td class="date"><time datetime="{{ flight.departure.date | date_to_xmlschema }}" method="format"></time></td>
+        <td colspan="4" class="title">
+            <span title="{{ flight.departure.airport.full }}">{{ flight.departure.airport.short }} ({{ flight.departure.airport.iata }})</span> - <span title="{{ flight.arrival.airport.full }}">{{ flight.arrival.airport.short }} ({{ flight.arrival.airport.iata }})</span>
+        </td>
+    </tr>
+    {% if flight.arrival.date %}
+    <tr>
+    {% else %}
+    <tr class="end">
+    {% endif %}
+        <td class="icon">
+            <img src="{{ site.baseurl }}/assets/img/carriers/{{ flight.carrier[1] }}.gif">
+        </td>
+        {% assign search = flight.carrier[0] | replace:' ','+' | downcase %}
+        <td class="carrier"><a href="https://www.google.co.uk/search?q={{ search }}" target="_{{ search }}">{{ flight.carrier[0] }}</a></td>
+        <td class="departure time">
+            {{ i18n.departure[locale] }}: <time datetime="{{ flight.departure.time | date_to_xmlschema }}" method="timeshift" zone="{{ flight.departure.zone }}">{{ flight.departure.time }}</time>
+        </td>
+        <td class="arrival time">
+            {{ i18n.arrival[locale] }}:  <time datetime="{{ flight.arrival.time | date_to_xmlschema }}" method="timeshift" zone="{{ flight.arrival.zone }}">{{ flight.arrival.time }}</time>
+        </td>
+        <td class="duration">{{ flight.duration }}</td>
+    </tr>
+    {% if flight.arrival.date %}
+    <tr class="end">
+        <td colspan="3"></td>
+        <td class="date"><time datetime="{{ flight.arrival.date | date_to_xmlschema }}" method="format"></time></td>
+        <td></td>
+    </tr>
+    {% endif %}
+{% endfor %}
+</table>

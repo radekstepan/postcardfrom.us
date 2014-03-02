@@ -44,6 +44,12 @@
                         .prop('title', datetime.format("Do MMMM YYYY"))
                         .removeAttr('method');
                         break;
+                    // Show a timezoned time in UTC.
+                    case 'timeshift':
+                        el
+                        .prop('title', datetime.zone(el.attr('zone')).format("HH:mm") + ' UTC')
+                        .removeAttr('method');
+                        break;
                 }
             });
 

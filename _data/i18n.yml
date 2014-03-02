@@ -29,3 +29,11 @@ permalink:
 oops:
     en: "Oops"
     cz: "Chybička se vloudila"
+
+departure:
+    en: "Dep"
+    cz: "Odlet"
+
+arrival:
+    en: "Arr"
+    cz: "Přílet"

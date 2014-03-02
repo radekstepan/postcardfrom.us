@@ -140,6 +140,16 @@ time{display:block;white-space:nowrap}
 #content .wrapper.list article time{display:inline-block;line-height:20px;vertical-align:top;width:70px;text-transform:uppercase}
 #content .wrapper.list article ul.tags{margin:4px 0 0 74px}
 #content .wrapper.list .tag.group{display:none}
+#flights{width:100%;}
+#flights tr:not(:last-child).end{border-bottom:25px solid transparent}
+#flights tr.end td.date{opacity:.5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:alpha(opacity=50)}
+#flights tr td{line-height:15px;}
+#flights tr td time{text-transform:uppercase;line-height:20px;display:inline}
+#flights tr td.title{margin:0;}
+#flights tr td.title.bold{text-transform:uppercase}
+#flights tr td.icon img{height:13px;vertical-align:baseline}
+#flights tr td.carrier{max-width:125px}
+#flights tr td.time{white-space:nowrap}
 #footer{color:#7fa5a7;padding:0 40px;text-align:center;}
 #footer ul li{margin:0 10px;}
 #footer ul li a{font-weight:bold}

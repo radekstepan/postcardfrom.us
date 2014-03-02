@@ -1,0 +1,111 @@
+-
+    carrier: [ "Lufthansa 911", "lufthansa" ]
+    departure:
+        airport:
+            short: London
+            full:  London Heathrow Airport
+            iata:  LHR
+        time: "16:50"
+        zone: "+00:00"
+        date: "Mar 3"
+    arrival:
+        airport:
+            short: Frankfurt
+            full:  Frankfurt Airport
+            iata:  FRA
+        time: "19:25"
+        zone: "-01:00"
+    duration: 1h 35m
+-
+    carrier: [ "Condor Flugdienst 1236", "condor" ]
+    departure:
+        airport:
+            short: Frankfurt
+            full:  Frankfurt Airport
+            iata:  FRA
+        time: "21:55"
+        zone: "-01:00"
+        date: "Mar 3"
+    arrival:
+        airport:
+            short: Santo Domingo
+            full:  Las Américas International Airport
+            iata:  SDQ
+        time: "03:15"
+        zone: "+04:00"
+        date: "Mar 4"
+    duration: 10h 20m
+-
+    carrier: [ "Condor Flugdienst 1236", "condor" ]
+    departure:
+        airport:
+            short: Santo Domingo
+            full:  Las Américas International Airport
+            iata:  SDQ
+        time: "04:25"
+        zone: "+04:00"
+        date: "Mar 4"
+    arrival:
+        airport:
+            short: Panama
+            full:  Tocumen International Airport
+            iata:  PTY
+        time: "06:00"
+        zone: "+05:00"
+    duration: 2h 35m
+-
+    carrier: [ "Avianca 61", "avianca" ]
+    departure:
+        airport:
+            short: Panama
+            full:  Tocumen International Airport
+            iata:  PTY
+        time: "17:55"
+        zone: "+05:00"
+        date: "Mar 5"
+    arrival:
+        airport:
+            short: Bogota
+            full:  El Dorado International Airport
+            iata:  BOG
+        time: "19:20"
+        zone: "+05:00"
+    duration: 1h 25m
+-
+    carrier: [ "Avianca 97", "avianca" ]
+    departure:
+        airport:
+            short: Panama
+            full:  El Dorado International Airport
+            iata:  BOG
+        time: "22:23"
+        zone: "+05:00"
+        date: "Mar 5"
+    arrival:
+        airport:
+            short: Santiago
+            full:  Comodoro Arturo Merino Benítez International Airport
+            iata:  SCL
+        time: "06:07"
+        zone: "+04:00"
+        date: "Mar 6"
+    duration: 5h 44m
+-
+    carrier: [ "LAN Airlines 801", "lan" ]
+    departure:
+        airport:
+            short: Santiago
+            full:  Comodoro Arturo Merino Benítez International Airport
+            iata:  SCL
+        time: "23:20"
+        zone: "+04:00"
+        date: "Apr 3"
+    arrival:
+        airport:
+            short: Auckland
+            full:  Auckland Airport
+            iata:  AKL
+        time: "04:30"
+        zone: "-13:00"
+        date: "Apr 5"
+    duration: 12h 10m

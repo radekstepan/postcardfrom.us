@@ -274,6 +274,44 @@ time
     100% { transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
 }
 
+#flights
+    width: 100%
+
+    tr
+        &:not(:last-child)
+            &.end
+                border-bottom: 25px solid transparent
+
+        &.end
+            td
+                &.date
+                    opacity: 0.5
+
+        td
+            line-height: 15px
+
+            time
+                text-transform: uppercase
+                line-height: 20px
+                display: inline
+
+            &.title
+                margin: 0
+                
+                &.bold
+                    text-transform: uppercase
+
+            &.icon
+                img
+                    height: 13px
+                    vertical-align: baseline
+
+            &.carrier
+                max-width: 125px
+
+            &.time
+                white-space: nowrap
+
 #footer
     color: #7fa5a7
     padding: 0 40px
