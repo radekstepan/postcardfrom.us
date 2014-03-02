@@ -1,5 +1,5 @@
 -
-    carrier: [ "Lufthansa 911", "lufthansa" ]
+    carrier: "Lufthansa 911"
     departure:
         airport:
             short: London
@@ -17,7 +17,7 @@
         zone: "-01:00"
     duration: 1h 35m
 -
-    carrier: [ "Condor Flugdienst 1236", "condor" ]
+    carrier: "Condor Flugdienst 1236"
     departure:
         airport:
             short: Frankfurt
@@ -36,7 +36,7 @@
         date: "Mar 4"
     duration: 10h 20m
 -
-    carrier: [ "Condor Flugdienst 1236", "condor" ]
+    carrier: "Condor Flugdienst 1236"
     departure:
         airport:
             short: Santo Domingo
@@ -54,7 +54,7 @@
         zone: "+05:00"
     duration: 2h 35m
 -
-    carrier: [ "Avianca 61", "avianca" ]
+    carrier: "Avianca 61"
     departure:
         airport:
             short: Panama
@@ -72,7 +72,7 @@
         zone: "+05:00"
     duration: 1h 25m
 -
-    carrier: [ "Avianca 97", "avianca" ]
+    carrier: "Avianca 97"
     departure:
         airport:
             short: Panama
@@ -91,7 +91,7 @@
         date: "Mar 6"
     duration: 5h 44m
 -
-    carrier: [ "LAN Airlines 801", "lan" ]
+    carrier: "LAN Airlines 801"
     departure:
         airport:
             short: Santiago

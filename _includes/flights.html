@@ -14,11 +14,11 @@
     {% else %}
     <tr class="end">
     {% endif %}
+        {% assign carrier = flight.carrier | replace:' ','+' | downcase %}
         <td class="icon">
-            <img src="{{ site.baseurl }}/assets/img/carriers/{{ flight.carrier[1] }}.gif">
+            <img src="{{ site.baseurl }}/assets/img/carriers/{{ carrier | split:'+' | first }}.gif">
         </td>
-        {% assign search = flight.carrier[0] | replace:' ','+' | downcase %}
-        <td class="carrier"><a href="https://www.google.co.uk/search?q={{ search }}" target="_{{ search }}">{{ flight.carrier[0] }}</a></td>
+        <td class="carrier"><a href="https://www.google.co.uk/search?q={{ carrier }}" target="_{{ carrier }}">{{ flight.carrier }}</a></td>
         <td class="departure time">
             {{ i18n.departure[locale] }}: <time datetime="{{ flight.departure.time | date_to_xmlschema }}" method="timeshift" zone="{{ flight.departure.zone }}">{{ flight.departure.time }}</time>
         </td>
