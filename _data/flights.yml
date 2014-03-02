@@ -17,7 +17,7 @@
         zone: "-01:00"
     duration: 1h 35m
 -
-    carrier: "Condor Flugdienst 1236"
+    carrier: "Condor 1236"
     departure:
         airport:
             short: Frankfurt
@@ -36,7 +36,7 @@
         date: "Mar 4"
     duration: 10h 20m
 -
-    carrier: "Condor Flugdienst 1236"
+    carrier: "Condor 1236"
     departure:
         airport:
             short: Santo Domingo
@@ -75,7 +75,7 @@
     carrier: "Avianca 97"
     departure:
         airport:
-            short: Panama
+            short: Bogota
             full:  El Dorado International Airport
             iata:  BOG
         time: "22:23"

@@ -37,3 +37,7 @@ departure:
 arrival:
     en: "Arr"
     cz: "Přílet"
+
+empty:
+    en: "Nothing yet"
+    cz: "Ještě nic"
