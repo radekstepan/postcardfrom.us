@@ -95,10 +95,8 @@ You can customize the internationalization file in `_data/i18n.yml`.
 One or more photos can be embedded in the header of the post as follows:
 
 ```yaml
-photos: [ plane.jpg, sky.jpg, river.jpg ]
+photos: [ http://img1.jpg, http://img2.jpg ]
 ```
-
-These will be looked up in `assets/photos/`
 
 ####Location
 

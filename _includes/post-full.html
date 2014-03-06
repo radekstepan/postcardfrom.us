@@ -22,12 +22,12 @@ if (typeof $ != 'undefined') {
     <iframe class="video" src="//player.vimeo.com/video/{{ post.video.id }}?color={{ post.video.color }}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     {% endif %}
 
-    <!-- photos -->
+    <!-- picasa photos -->
     {% if post.photos %}
         {% for photo in post.photos %}
         <div class="photo">
-            <a target="_{{ photo | cgi_escape | downcase }}" href="{{ site.baseurl }}/assets/photos/{{ photo }}">
-                <img alt="{{ post.title }} - {{ photo }}" src="{{ site.baseurl }}/assets/photos/{{ photo }}" />
+            <a target="_{{ post.title | cgi_escape | downcase | append: forloop.index }}" href="{{ photo }}">
+                <img alt="{{ post.title }} - {{ photo }}" src="{{ photo }}" />
             </a>
         </div>
         {% endfor %}

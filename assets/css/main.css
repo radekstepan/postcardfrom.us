@@ -118,7 +118,7 @@ time{display:block;white-space:nowrap}
 #content .wrapper .permalink{float:right}
 #content .wrapper h1 .icon,#content .wrapper h2 .icon{font-size:20px;display:none}
 #content .wrapper .video,#content .wrapper .photo{margin-bottom:20px}
-#content .wrapper .photo img{max-width:100%;height:auto}
+#content .wrapper .photo img{max-width:100%;height:auto;text-align:center}
 #content .wrapper .content{margin:20px 0;}
 #content .wrapper .content p,#content .wrapper .content blockquote,#content .wrapper .content li{text-align:justify}
 #content .wrapper .content code{font-size:12px}
