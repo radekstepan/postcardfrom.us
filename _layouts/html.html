@@ -97,7 +97,11 @@
 
         $(function() {
             // Set locale.
+            {% if page.locale == 'private' %}
+            moment.lang('en');
+            {% else %}
             moment.lang('{{ page.locale }}');
+            {% endif %}
             // On document ready, process the page.
             $.event.trigger('process');
         });

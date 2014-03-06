@@ -1,43 +1,54 @@
 scroll:
     en: "Scroll to reveal more articles"
+    private: "Scroll to reveal more articles"
     cz: "Projeď pro další článek"
 
 archive:
     en: "archive"
+    private: "archive"
     cz: "přehled článků"
 
 schedule:
     en: "schedule"
+    private: "schedule"
     cz: "itinerář"
 
 contact:
     en: "contact"
+    private: "contact"
     cz: "kontakt"
 
 feed:
     en: "feed"
+    private: "feed"
     cz: "rss kanál"
 
 random:
     en: "random article"
+    private: "random article"
     cz: "náhodný článek"
 
 permalink:
     en: "permalink"
+    private: "permalink"
     cz: "trvalý odkaz"
 
 oops:
     en: "Oops"
+    private: "Oops"
     cz: "Chybička se vloudila"
 
 departure:
     en: "Dep"
+    private: "Dep"
     cz: "Odlet"
 
 arrival:
     en: "Arr"
+    private: "Arr"
     cz: "Přílet"
 
 empty:
     en: "Nothing yet"
+    private: "Nothing yet"
     cz: "Ještě nic"
