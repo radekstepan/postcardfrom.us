@@ -4,6 +4,6 @@ type:     text
 category: en
 ---
 
-Tape measure.
-Salt and pepper.
-Radek's deodorant.
+Lego man:
+
+> Bah! More shopping with this woman.
